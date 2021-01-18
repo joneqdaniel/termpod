@@ -1,28 +1,14 @@
 All information here is to my best knowledge, is is not proven by any official reference manual by [[Terminal Reality]].*
 
-POD2 files are simple container files housing other files like textures or models. File extension is _pod_.
+POD3 files are simple container files housing other files like textures or models. File extension is _pod_.
 
 ## Used in
 
-* [[4x4 Evo 1]]
-* [[4x4 Evo 2]]
-* [[Blair Witch Volume 1: Rustin Parr|Blair Witch 1]]
-* [[Nocturne]]
+* [[BloodRayne 1]]
+* [[BloodRayne 2]]
 
 ## Description
 
-Checksum algorithm used in POD2 files is CRC-CCITT32 with initial crc value of 0xFFFFFFFF
-
-- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/lammertb/libcrc)
-- [macutils - makecrc](http://github.com/jopadan/macutils)
-- [QuickBMS CRC](https://aluigi.altervista.org/bms/quickbms_crc_engine.txt) requires setting crc type to 2.
-
-```c
-#include <libcrc/checksum.h>
-
-pod_number_t crc = crc_ccitt32_ffffffff(input_str, nbytes);
-
-```
 
 ## Structure
 
