@@ -91,13 +91,9 @@ for (int i = 0; i < pod_header.file_count; i++)
 
 **Checksums**
 
-POD2 checksum is based on [CCITT32-CRC - A Collection of 32-bit CRC Tables and Algorithms](http://www.mrob.com/pub/comp/crc-all.html) algorithm.
-
-[QuickBMS CRC](https://aluigi.altervista.org/bms/quickbms_crc_engine.txt) requires setting crc type to 2.
-
-```c
-2 = ((crc << 8) | data[i]) ^ table[(crc >> (bits - 8)) & 0xff]
-encryption crc 0x04c11db7 "32 -1 -1 2 1 0"
+POD2 checksum is based on [macutils - CRC-CCITT32](http://github.com/jopadan/macutils/)
+using:
+- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/lammertb/libcrc)
 ```
 
 ## Status
