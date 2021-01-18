@@ -17,7 +17,7 @@ POD3 files are simple container files housing other files like textures or model
 typedef struct pod_header_pod3_s
 {
         pod_char_t ident[POD_HEADER_IDENT_SIZE];
-        pod_number_t checksum;
+        pod_number_t checksum; /* of data after checksum */
         pod_char_t comment[POD_HEADER_COMMENT_SIZE];
         pod_number_t file_count;
         pod_number_t audit_file_count;
