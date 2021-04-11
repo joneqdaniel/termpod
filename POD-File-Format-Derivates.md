@@ -91,13 +91,21 @@ for (int i = 0; i < pod_header.file_count; i++)
 
 **Checksums**
 
-POD2 checksum is based on [macutils - CRC-CCITT32](http://github.com/jopadan/macutils/)
+POD2 checksum is based on 
+sz cotained in:
+[Uwe Ohse - lrzsz](https://www.ohse.de/uwe/software/lrzsz.html)
+makecrc contained in:
+[macutils - CRC-CCITT32](http://github.com/dgilman/macutils/)
+
 using:
 
 - [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/jopadan/libcrc)
 
-first published by:
+first published and copyrighted by:
 
+[Stephen Satchell]()
+[Chuck Forsberg](https://en.wikipedia.org/wiki/Chuck_Forsberg)
+[Gary S. Brown]()
 Mark G. Mendel, 7/86
 UUCCP: ihnp4!umn-cs!hyper!mark, GEnie: mgm
 
