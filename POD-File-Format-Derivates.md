@@ -108,6 +108,7 @@ CRC-CCITT32 variant published and copyrighted since 1986 by:
 - [Chuck Forsberg](https://en.wikipedia.org/wiki/Chuck_Forsberg)
 - [Uwe Ohse](http://ohse.de/uwe/)
 - [David Gilman](http://github.com/dgilman/)
+- [Lammert Bies](http://github.com/lammertb/)
 
 ```
 
