@@ -93,7 +93,14 @@ for (int i = 0; i < pod_header.file_count; i++)
 
 POD2 checksum is based on [macutils - CRC-CCITT32](http://github.com/jopadan/macutils/)
 using:
-- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/lammertb/libcrc)
+
+- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/jopadan/libcrc)
+
+first published by:
+
+Mark G. Mendel, 7/86
+UUCCP: ihnp4!umn-cs!hyper!mark, GEnie: mgm
+
 ```
 
 ## Status
@@ -103,4 +110,3 @@ using:
 [[POD6|Pod-6-Format-Reference]] format completely analyzed and structure documented in C pseudo code
 
 **TODO**
-
