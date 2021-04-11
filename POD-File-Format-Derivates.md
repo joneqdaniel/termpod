@@ -114,8 +114,8 @@ CRC-CCITT32 variant published and copyrighted since 1986 by:
 
 ## Status
 
-[[POD2|Pod-2-Format-Reference]] format completely analyzed and structure documented in C pseudo code
+[[ POD2 | Pod-2-Format-Reference]] format completely analyzed and structure documented in C pseudo code
 
-[[POD6|Pod-6-Format-Reference]] format completely analyzed and structure documented in C pseudo code
+[[ POD6 | Pod-6-Format-Reference]] format completely analyzed and structure documented in C pseudo code
 
 **TODO**
