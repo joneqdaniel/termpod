@@ -13,7 +13,7 @@ POD2 files are simple container files housing other files like textures or model
 
 Checksum algorithm used in POD2 files is CRC-CCITT32 with initial crc value of 0xFFFFFFFF
 
-- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/lammertb/libcrc)
+- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/jopadan/libcrc)
 - [macutils - makecrc](http://github.com/jopadan/macutils)
 - [QuickBMS CRC](https://aluigi.altervista.org/bms/quickbms_crc_engine.txt) requires setting crc type to 2.
 
