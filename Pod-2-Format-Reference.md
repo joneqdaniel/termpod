@@ -18,7 +18,10 @@ Checksum algorithm used in POD2 files is CRC-CCITT32 with initial crc value of 0
 - [QuickBMS CRC](https://aluigi.altervista.org/bms/quickbms_crc_engine.txt) requires setting crc type to 2.
 
 ```c
-#include <libcrc/checksum.h>
+#include <checksum.h>
+
+pod_char_t* input_str = pod_file_start + 8;
+pod_size_t nbytes = pod_file_size - 8;
 
 pod_number_t crc = crc_ccitt32_ffffffff(input_str, nbytes);
 
