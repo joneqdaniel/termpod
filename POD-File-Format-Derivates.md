@@ -114,7 +114,7 @@ CRC-CCITT32 variant published and copyrighted since 1986 by:
 
 **TODO**
 
-* [[POD3|Pod-3-Format-Referene]] decompile Bloodrayne Demo to retrieve CRC algorithm and unknown field names
+* [[POD3|Pod-3-Format-Reference]] decompile Bloodrayne Demo to retrieve CRC algorithm and unknown field names
 
 **Done**
 
