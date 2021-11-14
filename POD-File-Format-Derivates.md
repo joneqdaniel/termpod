@@ -15,6 +15,7 @@ There are various versions of the POD files. There are not compatible with each 
 ```c
 /* standard main variable type sizes common to all POD file formats      */
 typedef uint32_t                             pod_number_t
+typedef int32_t                              pod_signed_number_t
 typedef int8_t                               pod_char_t
 typedef uint8_t                              pod_byte_t
 typedef __time32_t                           pod_time_t
