@@ -13,13 +13,44 @@ There are various versions of the POD files. There are not compatible with each 
   * else see [[POD1|Pod-1-Format-Reference]]
 
 ```c
-/* standard main variable type sizes common to all POD file formats      */
-typedef uint32_t                             pod_number_t
-typedef int32_t                              pod_signed_number_t
-typedef int8_t                               pod_char_t
-typedef uint8_t                              pod_byte_t
-typedef __time32_t                           pod_time_t
-typedef pod_char_t*                          pod_string_t
+/* main variable type sizes of POD file formats                                                            */
+/* integer types */
+typedef uint64_t                             pod_number64_t;
+typedef int64_t                              pod_signed_number64_t;
+typedef uint32_t                             pod_number32_t;
+typedef int32_t                              pod_signed_number32_t;
+typedef uint16_t                             pod_number16_t;
+typedef pod_number32_t                       pod_number_t;
+typedef pod_signed_number32_t                pod_signed_number_t;
+typedef uint8_t                              pod_byte_t;
+typedef uint16_t                             pod_word_t;
+typedef uint32_t                             pod_double_word_t;
+typedef uint64_t                             pod_quad_word_t;
+/* floating and fixed point types */
+typedef float                                pod_float32_t;
+typedef double                               pod_float64_t;
+typedef uint16_t                             pod_fixed16_t;
+typedef uint32_t                             pod_fixed32_t;
+/* boolean types */
+typedef bool                                 pod_bool_t;
+/* size and file offset types */
+typedef size_t                               pod_size_t;
+typedef ssize_t                              pod_ssize_t;
+typedef fpos_t                               pod_fpos_t;
+typedef off_t                                pod_off_t;
+/* character and string types */
+typedef int8_t                               pod_char_t;
+typedef wchar_t                              pod_wchar_t;
+typedef pod_char_t*                          pod_string_t;
+typedef wchar_t*                             pod_wchar_string_t;
+/* time types */
+typedef int32_t                              pod_time32_t;
+typedef int64_t                              pod_time64_t;
+typedef pod_time32_t                         pod_time_t;
+/* file handle types */
+typedef pod_char_t*                          pod_path_t;
+typedef DIR*                                 pod_dir_t;
+typedef FILE*                                pod_file_t;
 /* constants common to all POD file formats                              */
 #define POD_NUMBER_SIZE                      (sizeof(pod_number_t))
 #define POD_CHAR_SIZE                        (sizeof(pod_char_t))
