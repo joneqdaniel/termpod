@@ -51,18 +51,51 @@ typedef pod_time32_t                         pod_time_t;
 typedef pod_char_t*                          pod_path_t;
 typedef DIR*                                 pod_dir_t;
 typedef FILE*                                pod_file_t;
-/* constants common to all POD file formats                              */
-#define POD_NUMBER_SIZE                      (sizeof(pod_number_t))
-#define POD_CHAR_SIZE                        (sizeof(pod_char_t))
-#define POD_BYTE_SIZE                        (sizeof(pod_byte_t))
-#define POD_TIME_SIZE                        (sizeof(pod_time_t))
-#define POD_COMMENT_SIZE                     (80)
-#define EPD_COMMENT_SIZE                     (256)
-#define POD_HEADER_CHECKSUM_DEFAULT          0x44424247
-#define POD_ENTRY_CHECKSUM_DEFAULT           0x20444542
-#define POD_ENTRY_TIMESTAMP_DEFAULT          0x42494720
-#define POD_HEADER_UNKNOWN10C_DEFAULT        0x58585858
-#define POD_IDENT_SIZE                       POD_NUMBER_SIZE
+
+#define POD_FILE_BLOCK_SIZE                  512
+typedef quad_t pod_file_block_t  __attribute__ ((__vector_size__(POD_FILE_BLOCK_SIZE)));
+
+#define POD_NUMBER_SIZE                      sizeof(pod_number_t)          /* length of a numerical entry    */
+#define POD_BYTE_SIZE                        sizeof(pod_byte_t)            /* length of a byte entry         */
+#define POD_CHAR_SIZE                        sizeof(pod_char_t)            /* length of a character entry    */
+#define POD_STRING_SIZE                      sizeof(pod_string_t)          /* length string char* entry      */
+#define POD_TIME_SIZE                        sizeof(pod_time_t)            /* length of a time entry         */
+#define POD_HEADER_CHECKSUM_DEFAULT          0x44424247                    /* default checksum of POD file   */
+#define POD_ENTRY_CHECKSUM_DEFAULT           0x20444542                    /* default checksum of POD entry  */
+#define POD_ENTRY_TIMESTAMP_DEFAULT          0x42494720                    /* default timestamp of POD entry */
+#define POD_HEADER_UNKNOWN10C_DEFAULT        0x58585858			   /* default value of unknown10c    */
+#define POD_HEADER_UNKNOWN11C_DEFAULT        0x58585858                    /* default value of unknown11c    */
+#define POD_HEADER_NUMBER_MIN_DEFAULT        0x00000000                    /* default minimal number         */
+#define POD_HEADER_NUMBER_MAX_DEFAULT        0xFFFFFFFF                    /* default maximal number         */
+#define POD_CHECKSUM_DEFAULT                 0xFFFFFFFF                    /* default seed for CCIT32-CRC    */
+#define POD_PATH_SEPARATOR                   '\\'                          /* default path separator         */
+#define POD_PATH_NULL                        '\0'
+#define POD_SYSTEM_PATH_SIZE                 1024                          /* default system path length     */
+#define POD_UMASK                            0755                          /* default UMASK privileges       */
+extern char *rotorchar;
+pod_string_t pod_ctime(pod_time_t* time32);
+
+enum pod_string_size_t
+{
+	POD_STRING_4=4, POD_STRING_32=32, POD_STRING_48=48, POD_STRING_64=64, POD_STRING_80=80,
+	POD_STRING_96=96, POD_STRING_128=128, POD_STRING_256=256, POD_STRING_264=264,
+	POD_STRING_SIZE_SIZE=9,
+};
+typedef enum pod_string_size_t pod_string_size_t;
+
+#define POD_COMMENT_SIZE                     POD_STRING_80                 /* comment length of POD format   */
+#define EPD_COMMENT_SIZE                     POD_STRING_256                /* comment length of EPD format   */
+
+enum pod_ident_type_t
+{
+	POD1 = 0, POD2, POD3, 
+	POD4, POD5, POD6, 
+	EPD, POD_IDENT_TYPE_SIZE, 
+};
+typedef enum pod_ident_type_t pod_ident_type_t;
+
+#define POD_IDENT_SIZE                       POD_STRING_4             /* file magic ident length        */
+#define POD_IDENT_TYPE_SIZE                  (EPD + 1)                /* number of POD format types     */
 
 pod_string_t pod_ctime(pod_time_t* time32)
 {
