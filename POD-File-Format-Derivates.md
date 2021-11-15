@@ -62,8 +62,8 @@ typedef FILE*                                pod_file_t;
 #define POD_ENTRY_TIMESTAMP_DEFAULT          0x42494720                    /* default timestamp of POD entry */
 #define POD_HEADER_UNKNOWN10C_DEFAULT        0x58585858			   /* default value of unknown10c    */
 #define POD_HEADER_UNKNOWN11C_DEFAULT        0x58585858                    /* default value of unknown11c    */
-#define POD_HEADER_NUMBER_MIN_DEFAULT        0x00000000                    /* default minimal number         */
-#define POD_HEADER_NUMBER_MAX_DEFAULT        0xFFFFFFFF                    /* default maximal number         */
+#define POD_HEADER_FLAG0_DEFAULT             0x00000000                    /* default flag0 equals 0         */
+#define POD_HEADER_FLAG1_DEFAULT             0xFFFFFFFF                    /* default flag1 equals -1        */
 #define POD_CHECKSUM_DEFAULT                 0xFFFFFFFF                    /* default seed for CCIT32-CRC    */
 #define POD_PATH_SEPARATOR                   '\\'                          /* default path separator         */
 #define POD_PATH_NULL                        '\0'
