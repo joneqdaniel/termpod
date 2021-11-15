@@ -52,9 +52,6 @@ typedef pod_char_t*                          pod_path_t;
 typedef DIR*                                 pod_dir_t;
 typedef FILE*                                pod_file_t;
 
-#define POD_FILE_BLOCK_SIZE                  512
-typedef quad_t pod_file_block_t  __attribute__ ((__vector_size__(POD_FILE_BLOCK_SIZE)));
-
 #define POD_NUMBER_SIZE                      sizeof(pod_number_t)          /* length of a numerical entry    */
 #define POD_BYTE_SIZE                        sizeof(pod_byte_t)            /* length of a byte entry         */
 #define POD_CHAR_SIZE                        sizeof(pod_char_t)            /* length of a character entry    */
@@ -96,6 +93,46 @@ typedef enum pod_ident_type_t pod_ident_type_t;
 
 #define POD_IDENT_SIZE                       POD_STRING_4             /* file magic ident length        */
 #define POD_IDENT_TYPE_SIZE                  (EPD + 1)                /* number of POD format types     */
+
+/* pod_header_t element sizes */
+#define POD_HEADER_NUMBER_SIZE               POD_NUMBER_SIZE
+#define POD_HEADER_COMMENT_SIZE              POD_COMMENT_SIZE
+#define POD_HEADER_EPD_COMMENT_SIZE          EPD_COMMENT_SIZE
+#define POD_HEADER_IDENT_SIZE                POD_IDENT_SIZE
+#define POD_HEADER_NEXT_ARCHIVE_SIZE         POD_STRING_96
+#define POD_HEADER_AUTHOR_SIZE               POD_HEADER_COMMENT_SIZE
+#define POD_HEADER_COPYRIGHT_SIZE            POD_HEADER_COMMENT_SIZE
+#define POD_HEADER_CHECKSUM_SIZE             POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_FILE_COUNT_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_AUDIT_FILE_COUNT_SIZE     POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_REVISION_SIZE             POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_VERSION_SIZE              POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_PRIORITY_SIZE             POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_INDEX_OFFSET_SIZE         POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_SIZE_INDEX_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_NAME_COUNT_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_UNKNOWN10C_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_NUMBER_MIN_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_NUMBER_MAX_SIZE           POD_HEADER_NUMBER_SIZE
+#define POD_HEADER_UNKNOWN11C_SIZE           POD_HEADER_NUMBER_SIZE
+
+#define POD_DIR_ENTRY_FILENAME_SIZE          POD_STRING_256
+#define POD_DIR_ENTRY_NUMBER_SIZE            POD_NUMBER_SIZE
+#define POD_DIR_ENTRY_SIZE_SIZE              POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_OFFSET_SIZE            POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_PATH_OFFSET_SIZE       POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_UNCOMPRESSED_SIZE      POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_COMPRESSION_LEVEL_SIZE POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_TIMESTAMP_SIZE         POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_CHECKSUM_SIZE          POD_DIR_ENTRY_NUMBER_SIZE
+#define POD_DIR_ENTRY_ZERO_SIZE              POD_DIR_ENTRY_NUMBER_SIZE
+
+/* audit entry sizes for POD2 */
+#define POD_AUDIT_ENTRY_USER_SIZE            POD_STRING_32
+#define POD_AUDIT_ENTRY_TIMESTAMP_SIZE       POD_TIME_SIZE
+#define POD_AUDIT_ENTRY_ACTION_SIZE          POD_NUMBER_SIZE
+#define POD_AUDIT_ENTRY_PATH_SIZE            POD_STRING_256
+#define POD_AUDIT_ENTRY_DATA_SIZE            POD_BYTE_SIZE * 16
 
 pod_string_t pod_ctime(pod_time_t* time32)
 {
@@ -160,20 +197,6 @@ POD2 checksum algorihm is CRC-CCITT32 derived of:
 
 - [sz - lrzsz](https://www.ohse.de/uwe/software/lrzsz.html)
 - [makecrc - macutils](http://github.com/dgilman/macutils/)
-
-and integrated updated into
-
-- [Libcrc - Multi platform MIT licensed CRC library in C](http://github.com/jopadan/libcrc)
-
-CRC-CCITT32 variant published and copyrighted since 1986 by:
-
-- [Gary S. Brown]()
-- [Mark G. Mendel](), 7/86
-- [Stephen Satchell]()
-- [Chuck Forsberg](https://en.wikipedia.org/wiki/Chuck_Forsberg)
-- [Uwe Ohse](http://ohse.de/uwe/)
-- [David Gilman](http://github.com/dgilman/)
-- [Lammert Bies](http://github.com/lammertb/)
 
 ## Status
 
