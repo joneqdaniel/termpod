@@ -1,0 +1,1 @@
+Reverse engineer to get file data checksum calculation and other header fields
