@@ -12,6 +12,4 @@ Implemented POD2 file analysis summary including checksum in text mode for testi
 
 **TODO**
 
-Analyze POD2 audit trail data and how to implement audit action
-
 Implement other POD file derivates checksum and file analysis testing
