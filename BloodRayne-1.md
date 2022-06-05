@@ -1,1 +1,1 @@
-Reverse engineer to get file data checksum calculation and other header fields or get the CPOD source code
+Reverse engineer to get file data checksum calculation and other header fields or get the CPOD C++ library source code
