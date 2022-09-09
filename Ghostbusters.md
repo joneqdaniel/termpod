@@ -1,1 +1,1 @@
-https://blog.gib.me/2009/06/19/ghostbusters/
+[@gibbed](https://github.com/gibbed)`s [Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters/)
