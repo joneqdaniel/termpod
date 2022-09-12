@@ -9,6 +9,7 @@ POD3 files are simple container files housing other files like textures or model
 
 ## Description
 
+ * Reverse engineer to get file data checksum calculation and other header fields or get the CPOD C++ library source code
 
 ## Structure
 
