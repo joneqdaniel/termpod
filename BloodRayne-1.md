@@ -30,4 +30,3 @@ It furthermore uses following file formats within the POD files:
 # More info
 
  * [Wikipedia](http://en.wikipedia.org/wiki/BloodRayne)
- * Reverse engineer to get file data checksum calculation and other header fields or get the CPOD C++ library source code
