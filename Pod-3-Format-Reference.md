@@ -9,7 +9,8 @@ POD3 files are simple container files housing other files like textures or model
 
 ## Description
 
- * Reverse engineer to get file data checksum calculation and other header fields or get the CPOD C++ library source code
+ * Header only checksum covers section after checksum until end of header.
+ * Reverse engineer to get missing fields and variants of file format or get the CPOD C++ library source code.
 
 ## Structure
 
@@ -17,7 +18,7 @@ POD3 files are simple container files housing other files like textures or model
 typedef struct pod_header_pod3_s
 {
 	pod_char_t ident[POD_HEADER_IDENT_SIZE];
-	pod_number_t checksum;
+	pod_number_t checksum; /* CRC-32/MPEG-2 header checksum of bytes 8 to 288 of size 280 */
 	pod_char_t comment[POD_HEADER_COMMENT_SIZE]; 
 	pod_number_t file_count;
 	pod_number_t audit_file_count;
