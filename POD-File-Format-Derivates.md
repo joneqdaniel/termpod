@@ -193,8 +193,9 @@ for (int i = 0; i < pod_header.file_count; i++)
 
 **Checksums**
 
-POD2 checksum algorihm is CRC-CCITT32 derived of:
+POD2/3 checksum is CRC-32/MPEG-2 aquivalent.
 
+- [crccalc.com](https://crccalc.com/?crc=123456789&method=CRC-32/MPEG-2&datatype=0&outtype=0])
 - [sz - lrzsz](https://www.ohse.de/uwe/software/lrzsz.html)
 - [makecrc - macutils](http://github.com/dgilman/macutils/)
 
@@ -202,7 +203,7 @@ POD2 checksum algorihm is CRC-CCITT32 derived of:
 
 **TODO**
 
-* [[POD3|Pod-3-Format-Reference]] format needs decompile [[BloodRayne 2|BloodRayne-2]] demo to retrieve CRC algorithm and unknown field names
+* [[POD3|Pod-3-Format-Reference]] format needs decompile [[BloodRayne 2|BloodRayne-2]] demo to identify unknown field names
 
 **Done**
 
