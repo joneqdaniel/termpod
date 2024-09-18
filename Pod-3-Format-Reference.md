@@ -40,7 +40,7 @@ struct header
 
 struct entry
 {
-        u32<1> path_offset;
+        u32<1> path_offset; /* (entry_offset + entry_count * sizeof(entry)) based */
         u32<1> size;
         u32<1> offset;
         t32<1> timestamp;
