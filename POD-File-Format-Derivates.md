@@ -20,9 +20,7 @@ POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
 Sring manipulation
 ```cpp
-namespace pod
-{
-namespace string
+namespace pod::string
 {
 str fgets(u32<1> size, FILE* stream)
 {
