@@ -17,7 +17,6 @@ struct header
         u32<1> entry_offset;
         u32<1> path_count;
 };
-
 struct entry
 {
         u32<1> path_offset;
@@ -27,7 +26,6 @@ struct entry
         u32<1> compression_level;
         u32<1> zero;
 };
-
 struct file
 {
      struct header header;
