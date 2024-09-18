@@ -46,4 +46,5 @@ struct entry
         t32<1> timestamp;
         u32<1> checksum;
 };
+};
 ```
