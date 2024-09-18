@@ -22,6 +22,51 @@ Time conversion
 ```cpp
 namespace pod
 {
+namespace string
+{
+str fgets(u32<1> size, FILE* stream)
+{
+    if(size == 0)
+        return nullptr;
+
+    str dst = (str)calloc(size, 1);
+
+    for(u32<1> i = 0; i < size; i++)
+    {
+        dst[i] = fgetc(stream);
+        if(dst[i] == EOF)
+           dst[i] = '\0';
+        if(dst[i] == '\0')
+           break;
+    }
+    if(strlen(dst) == 0)
+    {
+        free(dst);
+        dst = nullptr;
+    }
+    else
+    {
+        dst = (str)realloc(dst, strlen(dst) + 1);
+    }
+    return dst;
+ }
+
+                        u32<1> ceil(u32<1> size)
+                        {
+                                static const u32<1> sizes[10] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
+                                u32<1> dst;
+                                for(dst = 0; dst < size; dst++);
+                                return dst;
+                        }
+
+                        void replace_separator(char* src, const char* sep_old, const char* sep_new)
+                        {
+                                const size_t len = strlen(src);
+                                for(u32<1> i = 0; i < len; i++)
+                                        if(src[i] == *sep_old)
+                                                src[i] = *sep_new;
+                        }
+
 char ctime(int32_t* time32)
 {
 	struct tm tm;
