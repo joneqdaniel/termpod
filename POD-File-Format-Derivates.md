@@ -51,7 +51,7 @@ str fgets(u32<1> size, FILE* stream)
 
 u32<1> ceil(u32<1> size)
 {
-    static const u32<1> sizes[10] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
+    static const u32<1> sizes[12] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
     u32<1> dst;
     for(dst = 0; dst < size; dst++);
     return dst;
