@@ -2,13 +2,14 @@
 
 CRC-32/MPEG-2 checksum variant
 
-```cpp
+```sh
 poly    : 0x04C11DB7
 ref_in  : false
 ref_out : false
 xor_in  : 0xFFFFFFFF
 xor_out : 0
-
+```
+```cpp
 POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
 POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset=280
 POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
