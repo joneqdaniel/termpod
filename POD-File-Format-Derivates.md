@@ -65,7 +65,7 @@ void replace_separator(char* src, const char* sep_old, const char* sep_new)
           src[i] = *sep_new;
 }
 
-char ctime(int32_t* time32)
+char* ctime(int32_t* time32)
 {
 	struct tm tm;
 	errno_t ret = _localtime32_s(&tm, time32);
@@ -75,7 +75,7 @@ char ctime(int32_t* time32)
 		return 0;
 	}
 	__time64_t time64 = _mktime64(&tm);
-        pod_string_t str = _ctime64(&time64);
+        char* str = _ctime64(&time64);
         str[strcspn ( str, "\n" )] = '\0';
 	return str;
 }
