@@ -1,17 +1,23 @@
 *All information here is to my best knowledge, is is not proven by any official reference manual by [[Terminal Reality]].*
 
-POD files are simple container files housing other files like textures or models. File extension is _pod_.
-
-There are various versions of the POD files. There are not compatible with each other. Each version can be identified by the first 4 bytes of the file.
-
-  * file starts with *POD6* see [[POD6|Pod-6-Format-Reference]]
-  * file starts with *POD5* see [[POD5|Pod-5-Format-Reference]]
-  * file starts with *POD4* see [[POD4|Pod-4-Format-Reference]]
-  * file starts with *POD3* see [[POD3|Pod-3-Format-Reference]]
-  * file starts with *POD2* see [[POD2|Pod-2-Format-Reference]]
-  * file starts with *dxte* see [[EPD|Epd-Format-Reference]]
-  * else see [[POD1|Pod-1-Format-Reference]]
-
+POD file format CRC-32/MPEG-2 checksum variant
+```sh
+poly    : 0x04C11DB7
+ref_in  : false
+ref_out : false
+xor_in  : 0xFFFFFFFF
+xor_out : 0
+```
+POD file format variants different checksum ranges
+```c
+POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
+POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset=280
+POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
+POD5 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
+EPD  : offset=sizeof(header)                 count=sizeof(file  )-offset
+POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
+POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
+```
 ```cpp
 namespace pod
 {
