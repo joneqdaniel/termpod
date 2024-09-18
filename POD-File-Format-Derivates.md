@@ -9,7 +9,7 @@ ref_out : false
 xor_in  : 0xFFFFFFFF
 xor_out : 0
 ```
-```cpp
+```c
 POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
 POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset=280
 POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
