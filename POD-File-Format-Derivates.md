@@ -1,15 +1,14 @@
 *All information here is to my best knowledge, is is not proven by any official reference manual by [[Terminal Reality]].*
 
-POD file format CRC-32/MPEG-2 checksum variant
-```sh
+CRC-32/MPEG-2 checksum variant
+
+```cpp
 poly    : 0x04C11DB7
 ref_in  : false
 ref_out : false
 xor_in  : 0xFFFFFFFF
 xor_out : 0
-```
-POD file format variants different checksum ranges
-```c
+
 POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
 POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset=280
 POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
