@@ -195,10 +195,7 @@ for (int i = 0; i < pod_header.file_count; i++)
 
 POD2/3 checksum is CRC-32/MPEG-2 aquivalent.
 
-- [crccalc.com](https://crccalc.com/?crc=123456789&method=CRC-32/MPEG-2&datatype=0&outtype=0])
-- [sz - lrzsz](https://www.ohse.de/uwe/software/lrzsz.html)
-- [makecrc - macutils](http://github.com/dgilman/macutils/)
-
+- [crccalc.com](https://crccalc.com/?crc=123456789&method=CRC-32/MPEG-2&datatype=0&outtyp
 ## Status
 
 **TODO**
