@@ -38,7 +38,7 @@ struct file
     struct entry  entries[header.entry_count];
     c8<1>* path_data;
     u8<1>* entry_data;
-    pod::type::audit audit_entries[header.audit_count];
+    pod::type::audit audits[header.audit_count];
 };
 };
 ```
