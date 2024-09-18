@@ -18,7 +18,7 @@ EPD  : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
-Time conversion
+Sring manipulation
 ```cpp
 namespace pod
 {
@@ -51,21 +51,21 @@ str fgets(u32<1> size, FILE* stream)
     return dst;
  }
 
-                        u32<1> ceil(u32<1> size)
-                        {
-                                static const u32<1> sizes[10] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
-                                u32<1> dst;
-                                for(dst = 0; dst < size; dst++);
-                                return dst;
-                        }
+u32<1> ceil(u32<1> size)
+{
+    static const u32<1> sizes[10] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
+    u32<1> dst;
+    for(dst = 0; dst < size; dst++);
+    return dst;
+}
 
-                        void replace_separator(char* src, const char* sep_old, const char* sep_new)
-                        {
-                                const size_t len = strlen(src);
-                                for(u32<1> i = 0; i < len; i++)
-                                        if(src[i] == *sep_old)
-                                                src[i] = *sep_new;
-                        }
+void replace_separator(char* src, const char* sep_old, const char* sep_new)
+{
+    const size_t len = strlen(src);
+    for(u32<1> i = 0; i < len; i++)
+       if(src[i] == *sep_old)
+          src[i] = *sep_new;
+}
 
 char ctime(int32_t* time32)
 {
