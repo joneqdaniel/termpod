@@ -18,6 +18,7 @@ EPD  : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
+Time conversion
 ```cpp
 namespace pod
 {
