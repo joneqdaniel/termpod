@@ -10,11 +10,10 @@ POD3 files are simple container files housing other files like textures or model
 ## Description
 
  * Header only checksum covers section after checksum until end of header.
+ * Audit trail
  * Reverse engineer to get missing fields and variants of file format or get the CPOD C++ library source code.
 
 ## Structure
-
-288 byte header:
 
 ```cpp
 namespace pod3
