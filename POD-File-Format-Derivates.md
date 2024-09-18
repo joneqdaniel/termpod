@@ -13,7 +13,9 @@ There are various versions of the POD files. There are not compatible with each 
   * else see [[POD1|Pod-1-Format-Reference]]
 
 ```cpp
-pod_string_t pod_ctime(pod_time_t* time32)
+namespace pod
+{
+char ctime(int32_t* time32)
 {
 	struct tm tm;
 	errno_t ret = _localtime32_s(&tm, time32);
@@ -27,4 +29,5 @@ pod_string_t pod_ctime(pod_time_t* time32)
         str[strcspn ( str, "\n" )] = '\0';
 	return str;
 }
+};
 ```
