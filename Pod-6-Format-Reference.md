@@ -23,7 +23,7 @@ struct entry
         u32<1> size;
         u32<1> offset;
         u32<1> uncompressed;
-        u32<1> compression_level;
+        u32<1> compression_level; /* bitmask flag field defaulting to 8 */
         u32<1> zero;
 };
 struct file
@@ -35,5 +35,4 @@ struct file
 };
 };
 ```
-`compression_level` bitmask flag field defaulting to 8 indicates the
-compression used.
+
