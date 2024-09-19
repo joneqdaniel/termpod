@@ -1,0 +1,1 @@
+Algorithms used are [ZIP deflate](https://libzip.org/)
