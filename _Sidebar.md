@@ -1,4 +1,6 @@
 * [[Home]]
+* [[Checksum algorithm]]
+* [[Compression algorithm]]
 * [[POD File Format Derivates]]
   * [[EPD|Epd Format Reference]]
     * [[Fly 1]]
