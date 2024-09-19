@@ -1,4 +1,4 @@
-Algorithms used are CRC-32/MPEG-2 or CRC-CCITT32 and ZIP deflate.
+Algorithms used are CRC-32/MPEG-2
 ```sh
 poly    : 0x04C11DB7
 ref_in  : false
