@@ -1,7 +1,7 @@
-* [[Home]]
-* [[Checksum Algorithm]]
-* [[Compression Algorithm]]
 * [[POD File Format Derivates]]
+  * [[Checksum Algorithm]]
+  * [[Compression Algorithm]]
+
   * [[EPD|Epd Format Reference]]
     * [[Fly 1]]
   * [[POD1|Pod 1 Format Reference]]
