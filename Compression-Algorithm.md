@@ -1,1 +1,1 @@
-Algorithms used are [ZIP deflate](https://libzip.org/)
+Compression algorithm in use for POD4 and up is ZIP-Deflate available in [libzippp](https://github.com/ctabin/libzippp)
