@@ -85,7 +85,8 @@ enum action : u32
 	rem = 1,
 	chg = 2,
 };
-struct entry {
+struct entry
+{
 	c8  user[32];
 	u32 timestamp;
 	enum action action;
