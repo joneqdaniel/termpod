@@ -19,65 +19,83 @@ POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
 Sring manipulation
+
 ```cpp
-namespace pod::string
+namespace tr
 {
-str fgets(u32<1> size, FILE* stream)
+using u64 = uint64_t;
+using i64 = int64_t;
+using s64 = signed int64_t;
+using u32 = uint32_t;
+using i32 = int32_t;
+using c8  = char;
+using u8  = uint8_t;
+using i8  = int8_t;
+using t32 = i32;
+using t64 = i64;
+
+namespace pod
 {
-    if(size == 0)
-        return nullptr;
-
-    str dst = (str)calloc(size, 1);
-
-    for(u32<1> i = 0; i < size; i++)
-    {
-        dst[i] = fgetc(stream);
-        if(dst[i] == EOF)
-           dst[i] = '\0';
-        if(dst[i] == '\0')
-           break;
-    }
-    if(strlen(dst) == 0)
-    {
-        free(dst);
-        dst = nullptr;
-    }
-    else
-    {
-        dst = (str)realloc(dst, strlen(dst) + 1);
-    }
-    return dst;
- }
-
-u32<1> ceil(u32<1> size)
+namespace string
 {
-    static const u32<1> sizes[12] = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
-    u32<1> dst;
-    for(dst = 0; dst < size; dst++);
-    return dst;
+u32 ceil(u32 len)
+{
+        static const std::array<u32,12> sizes = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
+        std::array<u32,12>::const_iterator dst = sizes.begin();
+        while(size > *dst) dst++;
+        return *dst;
 }
 
-void replace_separator(char* src, const char* sep_old, const char* sep_new)
+c8* fgets(u32 size, FILE* stream)
 {
-    const size_t len = strlen(src);
-    for(u32<1> i = 0; i < len; i++)
-       if(src[i] == *sep_old)
-          src[i] = *sep_new;
+   if(size == 0)
+       return nullptr;
+   
+   c8* dst = (c8*)calloc(ceil(size), 1);
+
+   for(u32 i = 0; i < size; i++)
+   {
+       dst[i] = fgetc(stream);
+       if(dst[i] == EOF)
+          dst[i] = '\0';
+       if(dst[i] == '\0')
+          break;
+   }
+   if(strlen(dst) == 0)
+   {
+       free(dst);
+       dst = nullptr;
+   }
+   return dst;
 }
 
-char* ctime(int32_t* time32)
-{
-	struct tm tm;
-	errno_t ret = _localtime32_s(&tm, time32);
-	if(ret != 0)
-	{
-		fprintf(stderr, "%s\n", strerror(ret));
-		return 0;
-	}
-	__time64_t time64 = _mktime64(&tm);
-        char* str = _ctime64(&time64);
-        str[strcspn ( str, "\n" )] = '\0';
-	return str;
+c8* ctime(const t32* time) 
+{ 
+        time_t t = (time_t)*time; 
+        c8* dst = std::ctime(&t); 
+        dst[strcspn(dst, "\n")] = '\0';
+        return dst; 
 }
+};
+namespace audit
+{
+enum action : u32
+{
+	add = 0,
+	rem = 1,
+	chg = 2,
+};
+struct entry {
+	c8  user[32];
+	u32 timestamp;
+	enum action action;
+	c8  path[256];
+	i32 old_timestamp;
+	u32 old_size;
+	i32 new_timestamp;
+	u32 new_size;
+};
+};
+};
 };
 ```
