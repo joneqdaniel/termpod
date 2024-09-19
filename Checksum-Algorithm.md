@@ -1,4 +1,4 @@
-Algorithms used are [CRC-32/MPEG-2](https://github.com/jopadan/crcle)
+Checksum algorithm in use for EPD/POD2 and up is [CRC-32/MPEG-2](https://crccalc.com) available in [crcle](https://github.com/jopadan/crcle)
 ```sh
 poly    : 0x04C11DB7
 ref_in  : false
