@@ -1,1 +1,1 @@
-[libtermpod](https://github.com/jopadan/libtermpod/) a [[POD File Format Derivates]] file format library written in C++
+[libtermpod](https://github.com/jopadan/libtermpod/) a [[Terminal Reality]] [[POD|POD File Format Derivates]] game archive file format library written in C++
