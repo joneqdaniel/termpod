@@ -4,7 +4,7 @@ namespace tr::pod1
 struct header
 {
      u32<1> entry_count;
-     c8<80> common;
+     c8<80> comment;
 };
 struct entry
 {
