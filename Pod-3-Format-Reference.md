@@ -16,7 +16,7 @@ POD3 files are simple container files housing other files like textures or model
 ## Structure
 
 ```cpp
-namespace pod3
+namespace tr::pod3
 {
 struct header
 {
