@@ -3,7 +3,7 @@ namespace tr::pod5
 {
 struct header : struct tr::pod3::header
 {
-        c8<80> next_archive;
+        u32<1> next_archive;
 };
 
 struct entry
