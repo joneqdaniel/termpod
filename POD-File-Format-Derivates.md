@@ -2,6 +2,7 @@
 
 * [[Checksum Algorithm]]
 * [[Compression Algorithm]]
+* [[Audit Trail]]
 
 Sring manipulation
 
