@@ -6,22 +6,7 @@
 Sring manipulation
 
 ```cpp
-namespace tr
-{
-using u64 = uint64_t;
-using i64 = int64_t;
-using s64 = signed int64_t;
-using u32 = uint32_t;
-using i32 = int32_t;
-using c8  = char;
-using u8  = uint8_t;
-using i8  = int8_t;
-using t32 = i32;
-using t64 = i64;
-
-namespace pod
-{
-namespace string
+namespace tr::pod::string
 {
 u32 ceil(u32 len)
 {
@@ -61,27 +46,5 @@ c8* ctime(const t32* time)
         dst[strcspn(dst, "\n")] = '\0';
         return dst; 
 }
-};
-namespace audit
-{
-enum action : u32
-{
-	add = 0,
-	rem = 1,
-	chg = 2,
-};
-struct entry
-{
-	c8  user[32];
-	u32 timestamp;
-	enum action action;
-	c8  path[256];
-	i32 old_timestamp;
-	u32 old_size;
-	i32 new_timestamp;
-	u32 new_size;
-};
-};
-};
 };
 ```
