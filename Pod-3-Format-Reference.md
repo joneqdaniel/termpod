@@ -1,20 +1,3 @@
-All information here is to my best knowledge, is is not proven by any official reference manual by [[Terminal Reality]].*
-
-POD3 files are simple container files housing other files like textures or models. File extension is _pod_.
-
-## Used in
-
-* [[BloodRayne 1]]
-* [[BloodRayne 2]]
-
-## Description
-
- * Header only checksum covers section after checksum until end of header.
- * Audit trail
- * Reverse engineer to get missing fields and variants of file format or get the CPOD C++ library source code.
-
-## Structure
-
 ```cpp
 namespace tr::pod3
 {
