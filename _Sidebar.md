@@ -2,6 +2,7 @@
   * [[Checksum Algorithm]]
   * [[Compression Algorithm]]
   * [[Audit Trail]]
+  * [[String Helpers]]
   * [[POD File Format Derivates]]
     * [[EPD|Epd Format Reference]]
       * [[Fly 1]]
