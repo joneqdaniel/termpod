@@ -8,11 +8,13 @@ xor_out : 0
 ```
 Checksum ranges
 ```c
+/*    checksum */
 POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
 POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset=280
 POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
 POD5 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
 EPD  : offset=sizeof(header)                 count=sizeof(file  )-offset
+/* no checksum */
 POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
