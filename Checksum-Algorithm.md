@@ -1,4 +1,4 @@
-Checksum algorithm in use for [[EPD-Format-Reference]]/[[POD2-Format-Reference]] and up is [CRC-32/MPEG-2](https://crccalc.com/?crc=123456789&method=CRC-32/MPEG-2&datatype=0&outtype=0) available in [crcle](https://github.com/jopadan/crcle)
+Checksum algorithm in use for [[EPD|EPD-Format-Reference]]/[[POD2|Pod 2 Format Reference]] and up is [CRC-32/MPEG-2](https://crccalc.com/?crc=123456789&method=CRC-32/MPEG-2&datatype=0&outtype=0) available in [crcle](https://github.com/jopadan/crcle)
 ```sh
 poly    : 0x04C11DB7
 ref_in  : false
