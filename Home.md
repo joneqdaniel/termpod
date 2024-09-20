@@ -1,1 +1,1 @@
-[libtermpod](https://github.com/jopadan/libtermpod/) a [POD](https://github.com/jopadan/libtermpod/wiki/POD) file format library written in C++
+[libtermpod](https://github.com/jopadan/libtermpod/) a [[POD File Format Derivates]] file format library written in C++
