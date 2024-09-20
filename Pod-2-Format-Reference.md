@@ -1,18 +1,3 @@
-All information here is to my best knowledge, is is not proven by any official reference manual by [[Terminal Reality]].*
-
-POD2 files are simple container files housing other files like textures or models. File extension is _pod_.
-
-## Used in
-
-* [[4x4 Evo 1]]
-* [[4x4 Evo 2]]
-* [[Blair Witch Volume 1: Rustin Parr|Blair Witch 1]]
-* [[Nocturne]]
-
-## Description
-
-## Structure
-
 ```cpp
 namespace pod2
 {
