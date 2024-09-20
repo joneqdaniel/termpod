@@ -1,7 +1,6 @@
 ```cpp
 namespace tr::pod4
 {
-
 using header = struct tr::pod3::header;
 
 struct entry
