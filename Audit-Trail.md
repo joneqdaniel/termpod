@@ -1,5 +1,5 @@
 ```cpp
-namespace audit
+namespace tr::pod::audit
 {
 enum action : u32
 {
