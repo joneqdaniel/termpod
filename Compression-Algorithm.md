@@ -1,1 +1,1 @@
-Compression algorithm in use for POD4 and up is ZIP-Deflate available in [libzippp](https://github.com/ctabin/libzippp)
+Compression algorithm in use for [[POD4|Pod 4 Format Reference]] and up is ZIP-Deflate available in [libzippp](https://github.com/ctabin/libzippp)
