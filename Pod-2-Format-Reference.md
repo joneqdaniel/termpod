@@ -19,10 +19,10 @@ struct entry
 };
 struct file
 {
-    struct header header;
-    struct entry  entries[header.entry_count];
-    c8<1>* path_data;
-    u8<1>* entry_data;
+    struct header    header;
+    struct entry     entries[header.entry_count];
+    str              path_data;
+    buf              entry_data;
     pod::type::audit audits[header.audit_count];
 };
 };
