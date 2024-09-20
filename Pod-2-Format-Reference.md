@@ -1,5 +1,5 @@
 ```cpp
-namespace pod2
+namespace tr::pod2
 {
 struct header
 {
