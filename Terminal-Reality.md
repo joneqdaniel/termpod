@@ -10,10 +10,10 @@
 | Engine   | POD Version  |
 |----------|--------------|
 | Photex   | [EPD](https://github.com/jopadan/termpod/wiki/EPD-Format-Reference)/[POD1](https://github.com/jopadan/termpod/wiki/Pod-1-Format-Reference) |
-| Photex 2 | |
+| Photex 2 | [EPD](https://github.com/jopadan/termpod/wiki/EPD-Format-Reference)/[POD1](https://github.com/jopadan/termpod/wiki/Pod-1-Format-Reference) |
 | Photex 3 | [POD3](https://github.com/jopadan/termpod/wiki/Pod-3-Format-Reference) |
 | Nocturne | [POD2](https://github.com/jopadan/termpod/wiki/Pod-2-Format-Reference) |
-| EVO      | |
+| EVO      | [POD2](https://github.com/jopadan/termpod/wiki/Pod-2-Format-Reference) |
 | Infernal | [POD5](https://github.com/jopadan/termpod/wiki/Pod-5-Format-Reference)/[POD6](https://github.com/jopadan/termpod/wiki/Pod-6-Format-Reference) |
 
 More information see [www.terminalreality.com](http://www.terminalreality.com/).
