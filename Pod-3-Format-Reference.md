@@ -37,7 +37,7 @@ struct entry
 };
 };
 ```
-## Official Libraries/Classes
+## Official libraries/classes
 1. [[BloodRayne]]: [[CPod]], [[CPodFile]], [[CDemonPod]]
 
 ## Unofficial utilities
