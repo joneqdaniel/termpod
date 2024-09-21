@@ -6,7 +6,7 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 
-*Terminal Reality* is the developer of multiple games.
+*[Terminal Reality](https://en.wikipedia.org/wiki/Terminal_Reality)* is the developer of multiple games.
 
 | Name                                     | Year | Codename         | Engine   | POD  | Platforms |
 |------------------------------------------|------|------------------|----------|------|-------------|
