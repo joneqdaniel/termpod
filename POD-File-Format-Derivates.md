@@ -6,4 +6,4 @@
 * [[String Helpers]]
 
 Original POD format classes/libraries used by Terminal Reality engines:
-* BloodRayne: CPod, CPodFile, CDemonPod
+* [[BloodRayne]]: [[CPod]], [[CPodFile]], [[CDemonPod]]
