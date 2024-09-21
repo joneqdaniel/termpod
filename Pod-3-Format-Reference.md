@@ -37,6 +37,9 @@ struct entry
 };
 };
 ```
+## Official Libraries/Classes
+1. [[BloodRayne]]: [[CPod]], [[CPodFile]], [[CDemonPod]]
+
 ## Unofficial utilities
 1. [PodTools](https://gamebanana.com/tools/17801) is a powerful utility with support for a variety of Bloodrayne 1/2 formats. Unfortunately, this utility does not take care of checksums and timestamp. The header checksum gets the magic value `84 8E DE 4E` and other fields get `0`
 2. [br2poded](https://www.ctpax-x.org/?goto=files&show=23) [[mirror]](https://www.playground.ru/bloodrayne_2/file/bloodrayne_2_pod_encoder_decoder_for_buka_localization-897514). According to [this](https://forum.zoneofgames.ru/topic/1178-bloodrayne-2/), the Buka localizer used its own game archives format, making changes to the executable file. Therefore, a special utility has been released for the Russian version of Bloodrayne 2.
