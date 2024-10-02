@@ -1,1 +1,2 @@
-[@gibbed](https://github.com/gibbed)`s [Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters/)
+[Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters/)
+[Texture Converter: tex2dds](https://github.com/KeyofBlueS/tex2dds)
