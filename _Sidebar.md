@@ -26,7 +26,7 @@
         * [[The King of Fighters Collection]]
         * [[Samurai Shodown Anthology]]
       * [[POD5|Pod 5 Format Reference]]
-        * [[Ghostbusters]]
+        * [[Ghostbusters: The Video Game]]
         * [[Country Dance 2]]
         * [[Silent Hill: Book of Memories]]
         * [[The Walking Dead: Survival Instinct]]
