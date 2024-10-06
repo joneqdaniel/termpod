@@ -4,3 +4,4 @@
 * [[Compression Algorithm]]
 * [[Audit Trail]]
 * [[String Helpers]]
+* [[Version History]]
