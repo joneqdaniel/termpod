@@ -6,3 +6,7 @@
 * [[String Helpers]]
 
 [termpod](https://github.com/jopadan/termpod/) a [[Terminal Reality]] engine game archive [[POD|POD File Format Derivates]] file format library written in C++
+
+***
+* [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
+* [Unofficial POD File Format v1.1](http://www.viaregio.de/pieper/mtm/pod_file_format.shtml)
