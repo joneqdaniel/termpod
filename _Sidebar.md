@@ -3,6 +3,7 @@
   * [[Compression Algorithm]]
   * [[Audit Trail]]
   * [[String Helpers]]
+  * [[Version History]]
   * [[Terminal Reality]]
     * [[POD File Format Derivates]]
       * [[EPD|Epd Format Reference]]
