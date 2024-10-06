@@ -4,6 +4,8 @@
 * [[Compression Algorithm]]
 * [[Audit Trail]]
 * [[String Helpers]]
+* [[Version History]]
+
 ```cpp
 namespace tr::pod1
 {
