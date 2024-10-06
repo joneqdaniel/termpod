@@ -4,6 +4,7 @@
 * [[Compression Algorithm]]
 * [[Audit Trail]]
 * [[String Helpers]]
+* [[Version History]]
 
 *[Terminal Reality](en.wikipedia.org/wiki/Terminal_Reality)* engines:
 
