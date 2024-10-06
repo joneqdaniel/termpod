@@ -4,6 +4,7 @@ EPD [[POD1|Pod 1 Format Reference]] [[POD2|Pod 2 Format Reference]] [[POD3|Pod 3
 * [[Compression Algorithm]]
 * [[Audit Trail]]
 * [[String Helpers]]
+* [[Version History]]
 
 ```cpp
 namespace tr::epd
