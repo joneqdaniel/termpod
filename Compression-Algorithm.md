@@ -4,5 +4,6 @@
 * Compression Algorithm
 * [[Audit Trail]]
 * [[String Helpers]]
+* [[Version History]]
 
 Compression algorithm in use for [[POD4|Pod 4 Format Reference]] and up is ZIP-Deflate available in [libzippp](https://github.com/ctabin/libzippp)
