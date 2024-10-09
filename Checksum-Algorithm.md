@@ -28,6 +28,14 @@ POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
 ```cpp
 
+enum section
+{
+     none   = 0,
+     file   = 1,
+     header = 2,
+     entry  = 3,
+};
+
 const std::pair<u32<1>, enum section> range[last] =
 {
      { 0u                                                                      , section::none   },
