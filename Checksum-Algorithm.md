@@ -45,20 +45,33 @@ constexpr inline size_t section_size(size_t size)
 {
      switch(range[version].second)
      {
-           case section::file: 
+           case section::entry:
+           case section::file:
                return size;
            case section::header:
-               return sizeof(tr::pod<version>::header); 
+               return sizeof(tr::pod<version>::header);
            case section::none:
            default:
                return 0;
      }
 }
-
 template<enum version version>
-constexpr inline u32<1> checksum(uint8_t* buf, size_t size)
+constexpr inline size_t section_offset()
 {
-     const u32<1>& offset = range[version].first;
-     crc32::mpeg2::compute(buf + offset, section_size<version>(size) - offset);
+     switch(range[version].second)
+     {
+           case section::header:
+           case section::file:
+               return range[version].first;
+           case section::entry:
+           case section::none:
+           default:
+               return 0;
+     }
+}
+template<enum version version>
+constexpr inline u32<1> pod(uint8_t* buf, size_t size)
+{
+     crc32::mpeg2::compute(buf + section_offset<version>(), section_size<version>(size) - section_offset<version>());
 }
 ```
