@@ -50,4 +50,34 @@ const std::pair<u32<1>, enum section> range[last] =
      { sizeof(tr::pod<6>::header)                                              , section::file   },
      { sizeof(tr::epd::header)                                                 , section::file   },
 };
+
+template<enum version version>
+constexpr inline size_t section_size(size_t size)
+{
+     switch(range[version].second)
+     {
+           case section::file: 
+               return size;
+           case section::header:
+               return sizeof(tr::pod<version>::header); 
+           case section::none:
+           default:
+               return 0;
+     }
+}
+
+template<enum version version>
+constexpr inline u32<1> checksum(uint8_t* buf, size_t size)
+{
+     const u32<1>& offset = range[version].first;
+     crc32::mpeg2::compute(buf + offset, section_size<version>(size) - offset);
+}
+
+constexpr inline enum version id(const c8<4> magic)
+{
+     for(int i = pod2; i < last; i++)
+     if(strncmp(ident[i].second, &magic[0], 4) == 0)
+        return (enum version)i;
+            return pod1;
+}
 ```
