@@ -19,3 +19,17 @@ const std::pair<const char*, const char*> ident[last] =
      {"EPD" , "dtxe\0"}
 };
 ```
+
+```cpp
+const std::pair<u32<1>, enum section> checksum[last] =
+{
+     { 0u                                                                      , section::none   },
+     { sizeof(tr::pod<1>::header)                                              , section::file   },
+     { sizeof(tr::pod<2>::header::ident) + sizeof(tr::pod<2>::header::checksum), section::file   },
+     { sizeof(tr::pod<3>::header::ident) + sizeof(tr::pod<3>::header::checksum), section::header },
+     { sizeof(tr::pod<4>::header::ident) + sizeof(tr::pod<4>::header::checksum), section::header },
+     { sizeof(tr::pod<5>::header::ident) + sizeof(tr::pod<5>::header::checksum), section::header },
+     { sizeof(tr::pod<6>::header)                                              , section::file   },
+     { sizeof(tr::epd::header)                                                 , section::file   },
+};
+```
