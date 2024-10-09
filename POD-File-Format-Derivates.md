@@ -7,6 +7,26 @@
 * [[Version History]]
 
 ```cpp
+enum version
+{
+     none = 0,
+     pod1 = 1,
+     pod2 = 2,
+     pod3 = 3,
+     pod4 = 4,
+     pod5 = 5,
+     pod6 = 6,
+     epd  = 7,
+     last = 8,
+};
+
+enum section
+{
+     none   = 0,
+     file   = 1,
+     header = 2,
+};
+
 const std::pair<const char*, const char*> ident[last] =
 {
      {"NONE", "\0NONE"},
@@ -18,9 +38,7 @@ const std::pair<const char*, const char*> ident[last] =
      {"POD6", "POD6\0"},
      {"EPD" , "dtxe\0"}
 };
-```
 
-```cpp
 const std::pair<u32<1>, enum section> checksum[last] =
 {
      { 0u                                                                      , section::none   },
