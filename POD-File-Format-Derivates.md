@@ -39,6 +39,14 @@ const std::pair<const char*, const char*> ident[last] =
      {"EPD" , "dtxe\0"}
 };
 
+constexpr inline enum version id(const c8<4> magic)
+{
+     for(int i = pod2; i < last; i++)
+     if(strncmp(ident[i].second, &magic[0], 4) == 0)
+        return (enum version)i;
+            return pod1;
+}
+
 const std::pair<u32<1>, enum section> range[last] =
 {
      { 0u                                                                      , section::none   },
@@ -71,13 +79,5 @@ constexpr inline u32<1> checksum(uint8_t* buf, size_t size)
 {
      const u32<1>& offset = range[version].first;
      crc32::mpeg2::compute(buf + offset, section_size<version>(size) - offset);
-}
-
-constexpr inline enum version id(const c8<4> magic)
-{
-     for(int i = pod2; i < last; i++)
-     if(strncmp(ident[i].second, &magic[0], 4) == 0)
-        return (enum version)i;
-            return pod1;
 }
 ```
