@@ -70,8 +70,9 @@ constexpr inline size_t section_offset()
                return 0;
      }
 }
+
 template<enum version version>
-constexpr inline u32<1> pod(uint8_t* buf, size_t size)
+constexpr inline u32<1> checksum(uint8_t* buf, size_t size)
 {
      crc32::mpeg2::compute(buf + section_offset<version>(), section_size<version>(size) - section_offset<version>());
 }
