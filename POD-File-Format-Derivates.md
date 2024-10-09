@@ -25,6 +25,7 @@ enum section
      none   = 0,
      file   = 1,
      header = 2,
+     entry  = 3,
 };
 
 const std::pair<const char*, const char*> ident[last] =
