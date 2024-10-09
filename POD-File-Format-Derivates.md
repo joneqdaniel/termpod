@@ -5,3 +5,17 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 * [[Version History]]
+
+```cpp
+const std::pair<const char*, const char*> ident[last] =
+{
+     {"NONE", "\0NONE"},
+     {"POD1", "\0POD1"},
+     {"POD2", "POD2\0"},
+     {"POD3", "POD3\0"},
+     {"POD4", "POD4\0"},
+     {"POD5", "POD5\0"},
+     {"POD6", "POD6\0"},
+     {"EPD" , "dtxe\0"}
+};
+```
