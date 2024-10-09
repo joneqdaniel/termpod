@@ -55,6 +55,7 @@ constexpr inline size_t section_size(size_t size)
                return 0;
      }
 }
+
 template<enum version version>
 constexpr inline size_t section_offset()
 {
