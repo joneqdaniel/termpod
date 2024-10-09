@@ -39,7 +39,7 @@ const std::pair<const char*, const char*> ident[last] =
      {"EPD" , "dtxe\0"}
 };
 
-const std::pair<u32<1>, enum section> checksum[last] =
+const std::pair<u32<1>, enum section> range[last] =
 {
      { 0u                                                                      , section::none   },
      { sizeof(tr::pod<1>::header)                                              , section::file   },
