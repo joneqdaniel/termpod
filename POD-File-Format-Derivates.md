@@ -9,15 +9,15 @@
 ```cpp
 enum version
 {
-     none = 0,
-     pod1 = 1,
-     pod2 = 2,
-     pod3 = 3,
-     pod4 = 4,
-     pod5 = 5,
-     pod6 = 6,
-     epd  = 7,
-     last = 8,
+     NONE = 0,
+     POD1 = 1,
+     POD2 = 2,
+     POD3 = 3,
+     POD4 = 4,
+     POD5 = 5,
+     POD6 = 6,
+     EPD  = 7,
+     LAST = 8,
 };
 
 const std::pair<const char*, const char*> ident[last] =
@@ -34,10 +34,10 @@ const std::pair<const char*, const char*> ident[last] =
 
 constexpr inline enum version id(const c8<4> magic)
 {
-     for(int i = pod2; i < last; i++)
+     for(int i = POD2; i < last; i++)
      if(strncmp(ident[i].second, &magic[0], 4) == 0)
         return (enum version)i;
-            return pod1;
+            return POD1;
 }
 
 ```
