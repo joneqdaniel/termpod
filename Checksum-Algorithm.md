@@ -33,7 +33,9 @@ enum section
      none   = 0,
      file   = 1,
      header = 2,
-     entry  = 3,
+     extra  = 3,
+     entry  = 4,
+     audit  = 5,
 };
 
 const std::pair<u32<1>, enum section> range[last] =
