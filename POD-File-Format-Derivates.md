@@ -35,9 +35,9 @@ const std::pair<const char*, const char*> ident[last] =
 constexpr inline enum version id(const c8<4> magic)
 {
      for(int i = POD2; i < last; i++)
-     if(strncmp(ident[i].second, &magic[0], 4) == 0)
-        return (enum version)i;
-            return POD1;
+             if(strncmp(ident[i].second, &magic[0], 4) == 0)
+                     return (enum version)i;
+     return POD1;
 }
 
 enum section
@@ -49,4 +49,32 @@ enum section
      entry  = 4,
      audit  = 5,
 };
+template<enum version version>
+constexpr inline size_t section_size(size_t size)
+{
+       switch(range[version].second)
+       {
+                        case section::entry:
+                        case section::file:
+                                return size;
+                        case section::header:
+                                return sizeof(tr::pod::type<version>::header);
+                        default:
+                                return 0;
+                }
+        }
+        template<enum version version>
+        constexpr inline size_t section_offset()
+        {
+                switch(range[version].second)
+                {
+                        case section::header:
+                        case section::file:
+                                return range[version].first;
+                        case section::entry:
+                        default:
+                                return 0;
+                }
+        }
+
 ```
