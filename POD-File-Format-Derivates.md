@@ -42,6 +42,7 @@ constexpr inline enum version id(const c8<4> magic)
 
 enum section
 {
+     none   = 0,
      file   = 1,
      header = 2,
      extra  = 3,
