@@ -9,6 +9,7 @@
 ```cpp
 namespace tr::pod3
 {
+
 struct header
 {
 	c8<4> ident;    /* "POD3" */
@@ -26,6 +27,11 @@ struct header
 	i32<1> flag0;  /* -1 / 0 probably CRC-32 xor_in */
 	i32<1> flag1;  /* -1 / 0 probably CRC-32 xor_out */
 	i32<1> pad11c; /* 0xFFFFFFFF 0xD4009345 0x64B5C42D 0xA1FE0F74 */
+};
+
+struct extra_header : struct header
+{
+        i32<1> pad120;
 };
 
 struct entry
