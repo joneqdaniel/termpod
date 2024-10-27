@@ -40,4 +40,12 @@ constexpr inline enum version id(const c8<4> magic)
             return POD1;
 }
 
+enum section
+{
+     file   = 1,
+     header = 2,
+     extra  = 3,
+     entry  = 4,
+     audit  = 5,
+};
 ```
