@@ -40,8 +40,12 @@ struct extra_header : struct header
         i32<1> pad120;
 };
 
-header->pad11c = ceil2mpow2(size + header->pad10c, BLOCK_SIZE) - header->pad10c;
-header->pad120 = header->entry_offset - header->pad11c > BLOCK_SIZE ? BLOCK_SIZE : header->entry_offset - header->pad11c;
+constexpr inline unknown(u8<1>* buf, i32<1> off)
+{
+     struct extra_header* extra_header = reinterpret_cast<struct extra_header*>(buf);
+     extra_header->pad11c = ceil2mpow2(off + extra_header->pad10c, BLOCK_SIZE) - extra_header->pad10c;
+     extra_header->pad120 = extra_header->entry_offset - extra_header->pad11c > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->pad11c;
+}
 
 struct entry
 {
