@@ -28,7 +28,12 @@ struct header
 	i32<1> pad11c; /* 0xFFFFFFFF 0xD4009345 0x64B5C42D 0xA1FE0F74 */
 };
 
-static constexpr i32<1> BLOCK_SIZE = 2048;
+static constexpr u32<1> BLOCK_SIZE = 2048;
+
+constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
+{
+    return (x + (pow2 - 1)) & -pow2;
+}
 
 struct extra_header : struct header
 {
