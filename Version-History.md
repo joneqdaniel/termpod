@@ -7,6 +7,22 @@
 * Version History
 * [[Related Software]]
 
+Version Audit Log:
+
+#
+#### POD3 style
+| format | changes |
+|POD3|CRC-32/MPEG checksum and dependencies|
+|POD4|ZIP-Deflate compression|
+|POD5|linked archive list|
+
+#### EPD style
+| format | changes |
+|--------|---------|
+| EPD    | checksummed and timestamped entries |
+| POD2   | path name string table |
+| POD6   | compression instead of checksum |
+
 Official version history:
 * [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
 * [Unofficial POD File Format v1.1](http://www.viaregio.de/pieper/mtm/pod_file_format.shtml)
