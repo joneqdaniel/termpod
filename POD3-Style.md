@@ -5,12 +5,11 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 * [[Version History]]
+  * [[POD1 Style]]
+  * POD3 Style
 * [[Related Software]]
 
 #### Variants
-* [[POD1 Style]]
-* POD3 Style
-
 | format   | changes |
 |--------|-----------|
 | POD3   | EPD/POD2 changes + dependencies |
