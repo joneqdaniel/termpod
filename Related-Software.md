@@ -8,7 +8,7 @@
 * Related Software
 
 List of other related projects:
-* [TermPod extractor](https://github.com/Malte0621/TermPod) with old C version of this library]
+* [Malte0621/TermPod](https://github.com/Malte0621/TermPod) extractor with old C version of this library
 * [jtrfp](https://github.com/jtrfp/jtrfp)
 * [terminal-recall](https://github.com/jtrfp/terminal-recall)
 * [Poddy](https://github.com/dummiesman/Poddy)
