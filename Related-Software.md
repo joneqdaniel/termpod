@@ -16,6 +16,9 @@
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 
+#### Nocturne
+[Nocturne Editor](https://www.moddb.com/downloads/nocturne-editor)
+
 #### BloodRayne [2]
 * [PodTools](https://gamebanana.com/tools/17801)
 * [br2poded](https://www.ctpax-x.org/?goto=files&show=23)
