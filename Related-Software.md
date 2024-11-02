@@ -11,8 +11,8 @@ List of other related projects:
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
 * [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp)
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall)
-* [dummiesman/Poddy](https://github.com/dummiesman/Poddy)
-* [ghost82/podextract](https://github.com/ghost82/podextract)
+* [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD Manipulation tool supports unknown EPD('tsal') misses POD6
+* [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
 * [KeyofBlueS/tex2dds](https://github.com/KeyofBlueS/tex2dds)
