@@ -16,11 +16,11 @@ struct header
         u32<1> entry_count;
         u32<1> version;
         u32<1> entry_offset;
-        u32<1> path_count;
+        u32<1> names_count;
 };
 struct entry
 {
-        u32<1> path_offset;
+        u32<1> names_offset;
         u32<1> size;
         u32<1> offset;
         u32<1> uncompressed;
@@ -32,7 +32,7 @@ struct file
      struct header header;
      void*         contents;
      struct entry  entries[header.entry_count];
-     c8<1>         paths[header.path_count]; /* end of entries + entries[i].path_offset */
+     c8<1>         paths[header.names_count]; /* end of entries + entries[i].names_offset */
 };
 };
 ```
