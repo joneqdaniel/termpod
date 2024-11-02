@@ -15,11 +15,11 @@ List of other related projects:
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 
-#### [[Ghostbusters: The Video Game|Ghostbusters:-The-Video-Game]]
+#### [[POD5|Pod-5-Format-Reference]] [[POD6|Pod-6-Format-Reference]]
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 
-#### multiple game archive formats
+#### Various game archive formats
 * [Malvineous/camoto-studio](https://github.com/Malvineous/camoto-studio)
 * [Malvineous/libgamearchive](https://github.com/Malvineous/libgamearchive)
 * [aluigi/QuickBMS](https://aluigi.altervista.org/quickbms.htm)
