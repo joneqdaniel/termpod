@@ -40,7 +40,7 @@
     * [jtrfp](https://github.com/jtrfp/jtrfp)
     * [terminal-recall](https://github.com/jtrfp/terminal-recall)
     * [Poddy](https://github.com/dummiesman/Poddy)
-    * [podextract](https://github.com/ghost82/podextract)
+    * [podextract](https://github.com/ghoost82/podextract)
     * [hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
     * [Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
     * [tex2dds](https://github.com/KeyofBlueS/tex2dds)
