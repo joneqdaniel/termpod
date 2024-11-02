@@ -30,9 +30,9 @@
         * [Samurai Shodown Anthology](https://snk.fandom.com/wiki/Samurai_Shodown_Anthology)
       * [[POD5|Pod 5 Format Reference]]
         * [Ghostbusters: The Video Game](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game)
-        * [[Country Dance 2]]
-        * [[Silent Hill: Book of Memories]]
-        * [[The Walking Dead: Survival Instinct]]
+        * [Country Dance 2](https://nintendo.fandom.com/wiki/Country_Dance_2)
+        * [Silent Hill: Book of Memories](https://en.wikipedia.org/wiki/Silent_Hill:_Book_of_Memories)
+        * [The Walking Dead: Survival Instinct](https://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct)
       * [[POD6|Pod 6 Format Reference]]
         * [Ghostbusters: The Video Game Remastered](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game#Remastered_version)
 * [[Links]]
