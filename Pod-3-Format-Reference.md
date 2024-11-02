@@ -36,7 +36,7 @@ struct header
 
 struct extra_header : struct header
 {
-        i32<1> pad120;
+/* 0x0120 */ i32<1> pad120;
 };
 
 u32<1> names_offset = entry_offset + entry_count * sizeof(struct entry);
