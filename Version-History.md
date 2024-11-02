@@ -11,7 +11,7 @@
 | format | changes |
 |--------|-----------|
 | EPD    | checksum and timestamp |
-| POD2   | name string table and audit logs |
+| POD2   | path name string table and audit logs |
 | POD6   | compression instead of checksum |
 
 #### POD3 style
