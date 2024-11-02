@@ -9,6 +9,11 @@
 ```cpp
 namespace tr::pod3
 {
+
+struct dependency : std::array<uint8_t, 264>
+{
+};
+
 struct header
 {
 	c8<4> ident;    /* "POD3" */
@@ -20,13 +25,16 @@ struct header
 	u32<1> priority;
 	c8<80> author;
 	c8<80> copyright;
-	u32<1> entry_offset; /* zero based */
-	u32<1> pad10c;
-	u32<1> audit_offset; /* (entry_offset + entry_count * sizeof(entry)) based */
-	i32<1> flag0;  /* -1 / 0 probably CRC-32 xor_in */
-	i32<1> flag1;  /* -1 / 0 probably CRC-32 xor_out */
-	i32<1> pad11c; /* 0xFFFFFFFF 0xD4009345 0x64B5C42D 0xA1FE0F74 */
+	u32<1> entry_offset;   /* zero based */
+	u32<1> entries_crc;
+	u32<1> names_size;   /* (entry_offset + entry_count * sizeof(struct entry)) based */
+	i32<1> depends_count;
+	i32<1> depends_crc;
+	i32<1> audit_crc;
 };
+
+u32<1> names_offset = entry_offset + entry_count * sizeof(entry);
+u32<1> audit_offset = names_size + names_offset + sizeof(struct dependency) * depends_count;
 
 static constexpr u32<1> BLOCK_SIZE = 2048;
 
