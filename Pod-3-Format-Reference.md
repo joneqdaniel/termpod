@@ -52,7 +52,7 @@ constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
 constexpr inline unknown(u8<1>* buf, i32<1> off)
 {
      struct extra_header* extra_header = reinterpret_cast<struct extra_header*>(buf);
-     extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entries_crc;
+     extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entry_crc;
      extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
 }
 
