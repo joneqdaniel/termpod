@@ -12,7 +12,7 @@ namespace tr::epd
 {
      struct header
      {
-          c8<4>   ident;
+          c8<4>   ident; /* "dtxe" or "tsal" */
           c8<256> comment;
           u32<1>  entry_count;
           u32<1>  version;
