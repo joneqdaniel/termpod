@@ -21,7 +21,7 @@
 * [br2poded](https://www.ctpax-x.org/?goto=files&show=23)
 * [bloodrayne_2_pod_encoder_decoder_for_buka_localization](https://www.playground.ru/bloodrayne_2/file/bloodrayne_2_pod_encoder_decoder_for_buka_localization-897514)
 * [Buka localizer](https://forum.zoneofgames.ru/topic/1178-bloodrayne-2/)
-* [Abyss' POD Tools]
+* Abyss' POD Tools
 
 #### Ghostbusters: The Video Game [Remastered]
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
