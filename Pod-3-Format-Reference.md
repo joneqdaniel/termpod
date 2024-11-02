@@ -16,24 +16,29 @@ struct dependency : std::array<uint8_t, 264>
 
 struct header
 {
-	c8<4> ident;    /* "POD3" */
-	u32<1> checksum; /* CRC-32/MPEG-2 header checksum of bytes 8 to 288 of size 280 */
-	c8<80> comment; 
-	u32<1> entry_count;
-	u32<1> audit_count;
-	u32<1> revision;
-	u32<1> priority;
-	c8<80> author;
-	c8<80> copyright;
-	u32<1> entry_offset;   /* zero based */
-	u32<1> entries_crc;
-	u32<1> names_size;   /* (entry_offset + entry_count * sizeof(struct entry)) based */
-	i32<1> depends_count;
-	i32<1> depends_crc;
-	i32<1> audit_crc;
+/* 0x0000 */ c8<4> ident;    /* "POD3" */
+/* 0x0004 */ u32<1> checksum; /* CRC-32/MPEG-2 header checksum of bytes 8 to 288 of size 280 */
+/* 0x0008 */ c8<80> comment; 
+/* 0x0058 */ u32<1> entry_count;
+/* 0x005c */ u32<1> audit_count;
+/* 0x0060 */ u32<1> revision;
+/* 0x0064 */ u32<1> priority;
+/* 0x0068 */ c8<80> author;
+/* 0x00B8 */ c8<80> copyright;
+/* 0x0108 */ u32<1> entry_offset;   /* zero based */
+/* 0x010c */ u32<1> entries_crc;
+/* 0x0110 */ u32<1> names_size;
+/* 0x0114 */ i32<1> depends_count;
+/* 0x0118 */ i32<1> depends_crc;
+/* 0x011c */ i32<1> audit_crc;
 };
 
-u32<1> names_offset = entry_offset + entry_count * sizeof(entry);
+struct extra_header : struct header
+{
+        i32<1> pad120;
+};
+
+u32<1> names_offset = entry_offset + entry_count * sizeof(struct entry);
 u32<1> audit_offset = names_size + names_offset + sizeof(struct dependency) * depends_count;
 
 static constexpr u32<1> BLOCK_SIZE = 2048;
@@ -43,21 +48,16 @@ constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
     return (x + (pow2 - 1)) & -pow2;
 }
 
-struct extra_header : struct header
-{
-        i32<1> pad120;
-};
-
 constexpr inline unknown(u8<1>* buf, i32<1> off)
 {
      struct extra_header* extra_header = reinterpret_cast<struct extra_header*>(buf);
-     extra_header->pad11c = ceil2mpow2(off + extra_header->pad10c, BLOCK_SIZE) - extra_header->pad10c;
-     extra_header->pad120 = extra_header->entry_offset - extra_header->pad11c > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->pad11c;
+     extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entries_crc;
+     extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
 }
 
 struct entry
 {
-        u32<1> path_offset; /* (entry_offset + entry_count * sizeof(entry)) based */
+        u32<1> path_offset; /* names_offset based */
         u32<1> size;
         u32<1> offset;
         t32<1> timestamp;
