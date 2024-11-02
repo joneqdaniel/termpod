@@ -14,8 +14,12 @@ List of other related projects:
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall) - Java port of Terminal Velocity/Fury3/Hellbender engine games.
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
+
+#### [[Ghostbusters: The Video Game]]
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
+
+#### multiple game archive formats
 * [Malvineous/camoto-studio](https://github.com/Malvineous/camoto-studio)
 * [Malvineous/libgamearchive](https://github.com/Malvineous/libgamearchive)
 * [aluigi/QuickBMS](https://aluigi.altervista.org/quickbms.htm)
