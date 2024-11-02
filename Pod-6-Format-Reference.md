@@ -32,7 +32,7 @@ struct file
      struct header header;
      void*         contents;
      struct entry  entries[header.entry_count];
-     c8<1>         paths[header.names_count]; /* end of entries + entries[i].names_offset */
+     c8<1>         names[header.names_count]; /* end of entries + entries[i].names_offset */
 };
 };
 ```
