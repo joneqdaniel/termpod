@@ -37,7 +37,7 @@
         * [[Ghostbusters: The Video Game Remastered]]
 * [[Links]]
   * [Terminal Fury](https://archive.org/details/terminal-fury)
-  * [jtrfp]](https://github.com/jtrfp/jtrfp)
+  * [jtrfp](https://github.com/jtrfp/jtrfp)
   * [terminal-recall](https://github.com/jtrfp/terminal-recall0
   * [Poddy](https://github.com/dummiesman/Poddy)
   * [podextract](https://github.com/ghost82/podextract)
