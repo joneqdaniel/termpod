@@ -36,7 +36,8 @@ enum section
      header = 2,
      extra  = 3,
      entry  = 4,
-     audit  = 5,
+     depend = 5,
+     audit  = 6,
 };
 
 const std::pair<u32<1>, enum section> range[last] =
