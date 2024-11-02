@@ -8,7 +8,6 @@
 * Related Software
 
 List of other related projects:
-
 * [jtrfp](https://github.com/jtrfp/jtrfp)
 * [terminal-recall](https://github.com/jtrfp/terminal-recall)
 * [Poddy](https://github.com/dummiesman/Poddy)
