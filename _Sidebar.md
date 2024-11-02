@@ -4,6 +4,7 @@
   * [[Audit Trail]]
   * [[String Helpers]]
   * [[Version History]]
+  * [[Related Software]]
   * [[Terminal Reality]]
     * [[POD File Format Derivates]]
       * [[EPD|Epd Format Reference]]
@@ -36,16 +37,3 @@
         * [The Walking Dead: Survival Instinct](https://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct)
       * [[POD6|Pod 6 Format Reference]]
         * [Ghostbusters: The Video Game Remastered](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game#Remastered_version)
-  * [[Related Software]]
-    * [jtrfp](https://github.com/jtrfp/jtrfp)
-    * [terminal-recall](https://github.com/jtrfp/terminal-recall)
-    * [Poddy](https://github.com/dummiesman/Poddy)
-    * [podextract](https://github.com/ghoost82/podextract)
-    * [hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
-    * [Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
-    * [GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
-    * [camoto-studio](https://github.com/Malvineous/camoto-studio)
-    * [libgamearchive](https://github.com/Malvineous/libgamearchive)
-    * [QuickBMS](https://aluigi.altervista.org/quickbms.htm)
-    * [GameExtractor](https://github.com/wattostudios/GameExtractor)
-    * [DragonUnPACKer](https://github.com/elbereth/DragonUnPACKer)
