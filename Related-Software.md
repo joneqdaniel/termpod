@@ -7,8 +7,7 @@
 * [[Version History]]
 * Related Software
 
-```cpp
-```
+List of other related projects:
 
 * [jtrfp](https://github.com/jtrfp/jtrfp)
 * [terminal-recall](https://github.com/jtrfp/terminal-recall)
