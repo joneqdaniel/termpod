@@ -10,7 +10,7 @@
 #### EPD style
 | format | changes |
 |--------|---------|
-| EPD    | checksummed and timestamped entries "dtxe" or "tsal"|
+| EPD    | checksummed and timestamped entries |
 | POD2   | path name string table and audit logs |
 | POD6   | compression instead of checksum |
 #### POD3 style
