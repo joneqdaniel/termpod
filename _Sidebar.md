@@ -26,8 +26,8 @@
         * [BloodRayne](http://en.wikipedia.org/wiki/BloodRayne)
         * [BloodRayne 2](http://en.wikipedia.org/wiki/BloodRayne_2)
       * [[POD4|Pod 4 Format Reference]]
-        * [[The King of Fighters Collection]]
-        * [[Samurai Shodown Anthology]]
+        * [The King of Fighters Collection: The Orochi Saga](https://snk.fandom.com/wiki/The_King_of_Fighters_Collection:_The_Orochi_Saga)
+        * [Samurai Shodown Anthology](https://snk.fandom.com/wiki/Samurai_Shodown_Anthology)
       * [[POD5|Pod 5 Format Reference]]
         * [Ghostbusters: The Video Game](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game)
         * [[Country Dance 2]]
