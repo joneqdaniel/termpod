@@ -7,7 +7,7 @@
 * [[Version History]]
 * Related Software
 
-#### [[POD file format derivates|Pod-File-Format-Derivates]]
+#### POD file format derivates
 * [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD GUI tool in C# supports [[EPD|Epd-Format-Reference]] `"tsal"` and dependencies for [[POD3|Pod-3-Format-Reference]]
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
 * [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp) - Java POD format library and wiki
