@@ -27,7 +27,7 @@ struct header
 /* 0x0068 */ c8<80> author;
 /* 0x00B8 */ c8<80> copyright;
 /* 0x0108 */ u32<1> entry_offset;
-/* 0x010c */ u32<1> entries_crc;
+/* 0x010c */ u32<1> entry_crc;
 /* 0x0110 */ u32<1> names_size;
 /* 0x0114 */ i32<1> depends_count;
 /* 0x0118 */ i32<1> depends_crc;
