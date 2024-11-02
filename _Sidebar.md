@@ -43,7 +43,7 @@
     * [podextract](https://github.com/ghoost82/podextract)
     * [hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
     * [Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
-    * [tex2dds](https://github.com/KeyofBlueS/tex2dds)
+    * [GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
     * [camoto-studio](https://github.com/Malvineous/camoto-studio)
     * [libgamearchive](https://github.com/Malvineous/libgamearchive)
     * [QuickBMS](https://aluigi.altervista.org/quickbms.htm)
