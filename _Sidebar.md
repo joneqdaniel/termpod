@@ -35,7 +35,7 @@
         * [The Walking Dead: Survival Instinct](https://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct)
       * [[POD6|Pod 6 Format Reference]]
         * [Ghostbusters: The Video Game Remastered](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game#Remastered_version)
-  * [[Links]]
+  * [[Software]]
     * [Terminal Fury](https://archive.org/details/terminal-fury)
     * [jtrfp](https://github.com/jtrfp/jtrfp)
     * [terminal-recall](https://github.com/jtrfp/terminal-recall)
