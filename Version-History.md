@@ -12,6 +12,7 @@ Version Audit Log:
 #
 #### POD3 style
 | format | changes |
+|--------|---------|
 |POD3|CRC-32/MPEG checksum and dependencies|
 |POD4|ZIP-Deflate compression|
 |POD5|linked archive list|
