@@ -8,21 +8,18 @@
 * [[Related Software]]
 
 Version Audit Log:
-
-#
+#### EPD style
+| format | changes |
+|--------|---------|
+| EPD    | checksummed and timestamped entries |
+| POD2   | path name string table and audit logs |
+| POD6   | compression instead of checksum |
 #### POD3 style
 | format | changes |
 |--------|---------|
 |POD3|CRC-32/MPEG checksum and dependencies|
 |POD4|ZIP-Deflate compression|
 |POD5|linked archive list|
-
-#### EPD style
-| format | changes |
-|--------|---------|
-| EPD    | checksummed and timestamped entries |
-| POD2   | path name string table |
-| POD6   | compression instead of checksum |
 
 Official version history:
 * [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
