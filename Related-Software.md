@@ -15,7 +15,7 @@ List of other related projects:
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
-* [KeyofBlueS/tex2dds](https://github.com/KeyofBlueS/tex2dds)
+* [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 * [Malvineous/camoto-studio](https://github.com/Malvineous/camoto-studio)
 * [Malvineous/libgamearchive](https://github.com/Malvineous/libgamearchive)
 * [aluigi/QuickBMS](https://aluigi.altervista.org/quickbms.htm)
