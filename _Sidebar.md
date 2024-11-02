@@ -18,10 +18,10 @@
         * [CART Precision Racing](https://en.wikipedia.org/wiki/CART_Precision_Racing)
         * [Hellbender](https://en.wikipedia.org/wiki/Hellbender_(video_game))
       * [[POD2|Pod 2 Format Reference]]
-        * [[Nocturne]]
-        * [[Blair Witch 1]]
-        * [[4x4 Evo 1]]
-        * [[4x4 Evo 2]]
+        * [Nocturne](https://en.wikipedia.org/wiki/Nocturne_(video_game))
+        * [Blair Witch](https://en.wikipedia.org/wiki/Blair_Witch_(video_game))
+        * [4x4 Evo](https://en.wikipedia.org/wiki/4x4_Evo)
+        * [4x4 Evo 2](https://en.wikipedia.org/wiki/4x4_Evo_2)
       * [[POD3|Pod 3 Format Reference]]
         * [BloodRayne](http://en.wikipedia.org/wiki/BloodRayne)
         * [BloodRayne 2](http://en.wikipedia.org/wiki/BloodRayne_2)
