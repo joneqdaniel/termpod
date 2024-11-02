@@ -11,6 +11,7 @@
         * [Fly! II](https://en.wikipedia.org/wiki/Fly!)
         * [Fly! 2K](https://en.wikipedia.org/wiki/Fly!)
       * [[POD1|Pod 1 Format Reference]]
+        * [Terminal Fury](https://archive.org/details/terminal-fury)
         * [Terminal Velocity](https://en.wikipedia.org/wiki/Terminal_Velocity_(video_game))
         * [Fury3](https://en.wikipedia.org/wiki/Fury3)
         * [Monter Truck Madness 1](https://en.wikipedia.org/wiki/Monster_Truck_Madness)
@@ -36,7 +37,6 @@
       * [[POD6|Pod 6 Format Reference]]
         * [Ghostbusters: The Video Game Remastered](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game#Remastered_version)
   * [[Related Software]]
-    * [Terminal Fury](https://archive.org/details/terminal-fury)
     * [jtrfp](https://github.com/jtrfp/jtrfp)
     * [terminal-recall](https://github.com/jtrfp/terminal-recall)
     * [Poddy](https://github.com/dummiesman/Poddy)
