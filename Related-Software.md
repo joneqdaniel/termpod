@@ -11,7 +11,7 @@ List of other related projects:
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
 * [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp)
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall)
-* [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD GUI tool in C# supports [[EPD]] "tsal", dependencies for [[POD3]] and up but misses [[POD6]]
+* [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD GUI tool in C# supports [[EPD|Epd-Format-Reference]] "tsal", dependencies for [[POD3|Pod3-Format-Reference]] and up but misses [[POD6|Pod6-Format-Reference]]
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
