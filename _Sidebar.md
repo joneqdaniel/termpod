@@ -11,12 +11,12 @@
         * [Fly! II](https://en.wikipedia.org/wiki/Fly!)
         * [Fly! 2K](https://en.wikipedia.org/wiki/Fly!)
       * [[POD1|Pod 1 Format Reference]]
-        * [[Terminal Velocity]]
-        * [[Fury3]]
-        * [[MTM 1|Monter Truck Madness 1]]
-        * [[MTM 2|Monter Truck Madness 2]]
-        * [[CART Precision Racing]]
-        * [[Hellbender]]
+        * [Terminal Velocity](https://en.wikipedia.org/wiki/Terminal_Velocity_(video_game))
+        * [Fury3](https://en.wikipedia.org/wiki/Fury3)
+        * [MTM 1|Monter Truck Madness 1](https://en.wikipedia.org/wiki/Monster_Truck_Madness)
+        * [MTM 2|Monter Truck Madness 2](https://en.wikipedia.org/wiki/Monster_Truck_Madness_2)
+        * [CART Precision Racing](https://en.wikipedia.org/wiki/CART_Precision_Racing)
+        * [Hellbender](https://en.wikipedia.org/wiki/Hellbender_(video_game))
       * [[POD2|Pod 2 Format Reference]]
         * [[Nocturne]]
         * [[Blair Witch 1]]
