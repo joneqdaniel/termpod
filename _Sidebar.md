@@ -23,8 +23,8 @@
         * [[4x4 Evo 1]]
         * [[4x4 Evo 2]]
       * [[POD3|Pod 3 Format Reference]]
-        * [[BloodRayne 1]]
-        * [[BloodRayne 2]]
+        * [BloodRayne](http://en.wikipedia.org/wiki/BloodRayne)
+        * [BloodRayne 2](http://en.wikipedia.org/wiki/BloodRayne_2)
       * [[POD4|Pod 4 Format Reference]]
         * [[The King of Fighters Collection]]
         * [[Samurai Shodown Anthology]]
