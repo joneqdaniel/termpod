@@ -10,15 +10,15 @@
 #### EPD style
 | format | changes |
 |--------|---------|
-| EPD    | checksummed and timestamped entries |
+| EPD    | checksum and timestamp |
 | POD2   | path name string table and audit logs |
 | POD6   | compression instead of checksum |
 #### POD3 style
 | format | changes |
 |--------|---------|
-|POD3|CRC-32/MPEG checksum and dependencies|
-|POD4|ZIP-Deflate compression|
-|POD5|linked archive list|
+| POD3   | EPD/POD2 changes + dependencies |
+| POD4   | compression |
+| POD5   | linked archive list |
 
 Official version history:
 * [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
