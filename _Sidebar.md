@@ -9,6 +9,7 @@
       * [[EPD|Epd Format Reference]]
         * [[Fly!]]
         * [[Fly! II]]
+        * [[Fly! 2K]]
       * [[POD1|Pod 1 Format Reference]]
         * [[Terminal Velocity]]
         * [[Fury3]]
