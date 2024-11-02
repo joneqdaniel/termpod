@@ -7,9 +7,9 @@
   * [[Terminal Reality]]
     * [[POD File Format Derivates]]
       * [[EPD|Epd Format Reference]]
-        * [[Fly!]]
-        * [[Fly! II]]
-        * [[Fly! 2K]]
+        * [Fly!](https://en.wikipedia.org/wiki/Fly!)
+        * [Fly! II](https://en.wikipedia.org/wiki/Fly!)
+        * [Fly! 2K](https://en.wikipedia.org/wiki/Fly!)
       * [[POD1|Pod 1 Format Reference]]
         * [[Terminal Velocity]]
         * [[Fury3]]
