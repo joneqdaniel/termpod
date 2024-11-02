@@ -16,7 +16,6 @@
           * [Monter Truck Madness 2](https://en.wikipedia.org/wiki/Monster_Truck_Madness_2)
           * [CART Precision Racing](https://en.wikipedia.org/wiki/CART_Precision_Racing)
           * [Hellbender](https://en.wikipedia.org/wiki/Hellbender_(video_game))
-      * [[EPD Style]]
         * [[EPD|Epd Format Reference]]
           * [Fly!](https://en.wikipedia.org/wiki/Fly!)
           * [Fly! II](https://en.wikipedia.org/wiki/Fly!)
