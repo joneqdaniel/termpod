@@ -10,11 +10,6 @@
 
 * [[POD1 Style]]
 * [[POD3 Style]]
-| format   | changes |
-|--------|-----------|
-| POD3   | EPD/POD2 changes + dependencies |
-| POD4   | compression |
-| POD5   | linked archive list |
 
 #### Related Resources
 * [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
