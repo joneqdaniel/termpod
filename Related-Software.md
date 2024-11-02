@@ -15,7 +15,7 @@ List of other related projects:
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 
-#### [[Ghostbusters: The Video Game]]
+#### [[Ghostbusters: The Video Game|Ghostbusters:-The-Video-Game]]
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 
