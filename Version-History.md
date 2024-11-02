@@ -5,11 +5,9 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 * Version History
+  * [[POD1 Style]]
+  * [[POD3 Style]]
 * [[Related Software]]
-
-#### Variants
-* [[POD1 Style]]
-* [[POD3 Style]]
 
 #### Related Resources
 * [POD Files](http://mtm2.com/~mtmg/misc/fileformats/pod.html)
