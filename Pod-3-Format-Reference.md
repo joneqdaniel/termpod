@@ -17,8 +17,8 @@ struct dependency : std::array<uint8_t, 264>
 
 struct header
 {
-/* 0x0000 */ c8<4> ident;    /* "POD3" */
-/* 0x0004 */ u32<1> checksum; /* CRC-32/MPEG-2 header checksum of bytes 8 to 288 of size 280 */
+/* 0x0000 */ c8<4> ident;
+/* 0x0004 */ u32<1> checksum;
 /* 0x0008 */ c8<80> comment; 
 /* 0x0058 */ u32<1> entry_count;
 /* 0x005c */ u32<1> audit_count;
@@ -26,7 +26,7 @@ struct header
 /* 0x0064 */ u32<1> priority;
 /* 0x0068 */ c8<80> author;
 /* 0x00B8 */ c8<80> copyright;
-/* 0x0108 */ u32<1> entry_offset;   /* zero based */
+/* 0x0108 */ u32<1> entry_offset;
 /* 0x010c */ u32<1> entries_crc;
 /* 0x0110 */ u32<1> names_size;
 /* 0x0114 */ i32<1> depends_count;
