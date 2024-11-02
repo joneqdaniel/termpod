@@ -17,7 +17,7 @@
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 
 #### Nocturne
-[Nocturne Editor](https://www.moddb.com/downloads/nocturne-editor)
+* [Nocturne Editor](https://www.moddb.com/downloads/nocturne-editor)
 
 #### BloodRayne [2]
 * [PodTools](https://gamebanana.com/tools/17801)
