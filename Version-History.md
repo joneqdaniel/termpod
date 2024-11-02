@@ -7,15 +7,17 @@
 * Version History
 * [[Related Software]]
 
-| EPD | changes |
-|--------|---------|
+#### EPD style
+| format | changes |
+|--------|-----------|
 | EPD    | checksum and timestamp |
 | POD2   | name string table and audit logs |
 | POD6   | compression instead of checksum |
 
-| POD3 | changes |
-|--------|---------|
-| POD3   | EPD/POD2 including dependencies |
+#### POD3 style
+| format   | changes |
+|--------|-----------|
+| POD3   | EPD/POD2 changes + dependencies |
 | POD4   | compression |
 | POD5   | linked archive list |
 
