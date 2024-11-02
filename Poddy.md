@@ -1,2 +1,2 @@
 [Poddy](https://github.com/dummiesman/Poddy)
-[[POD|POD File Format Derivatives]] Manipulation tool for [[Terminal Reality Inc.|Terminal Reality]] games/software in [C#](https://dotnet.microsoft.com/en-us/languages/csharp)
+[[POD|POD File Format Derivates]] Manipulation tool for [[Terminal Reality Inc.|Terminal Reality]] games/software in [C#](https://dotnet.microsoft.com/en-us/languages/csharp)
