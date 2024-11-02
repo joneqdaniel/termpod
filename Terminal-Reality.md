@@ -5,6 +5,7 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 * [[Version History]]
+* [[Related Software]]
 
 *[Terminal Reality](en.wikipedia.org/wiki/Terminal_Reality)* engines:
 
