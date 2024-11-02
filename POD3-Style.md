@@ -9,7 +9,6 @@
   * POD3 Style
 * [[Related Software]]
 
-#### Variants
 | format   | changes |
 |--------|-----------|
 | POD3   | EPD/POD2 changes + dependencies |
