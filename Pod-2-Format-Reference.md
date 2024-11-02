@@ -36,5 +36,3 @@ struct file
 };
 };
 ```
-## Official utilities
-1. **podview**. In 2000, [Terminal Reality](https://github.com/jopadan/termpod/wiki/Terminal-Reality) released a kit for creating custom mods for Nocturne, aka [Nocturne Editor](https://www.moddb.com/downloads/nocturne-editor). podview is part of this kit and is designed to serve [POD2](https://github.com/jopadan/termpod/wiki/Pod-2-Format-Reference), [POD1](https://github.com/jopadan/termpod/wiki/Pod-1-Format-Reference) and [EPD](https://github.com/jopadan/termpod/wiki/EPD-Format-Reference) archives. In addition, it supports the calculation of checksums and viewing the history of changes (i.e. auditing). It is quite possible that is a fundamental utility that has given independent developers a lot of valuable information about the game archives of this company.  
