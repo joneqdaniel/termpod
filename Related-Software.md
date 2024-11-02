@@ -7,7 +7,7 @@
 * [[Version History]]
 * Related Software
 
-List of other related projects:
+#### [[POD|Pod-Format-Derivates]]
 * [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD GUI tool in C# supports [[EPD|Epd-Format-Reference]] `"tsal"` and dependencies for [[POD3|Pod-3-Format-Reference]]
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
 * [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp) - Java POD format library and wiki
@@ -15,7 +15,7 @@ List of other related projects:
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
 * [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 
-#### [[POD5|Pod-5-Format-Reference]] [[POD6|Pod-6-Format-Reference]]
+#### Ghostbusters: The Video Game [Remastered]
 * [gibbed/Gibbed.Ghostbusters](https://github.com/gibbed/Gibbed.Ghostbusters)
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 
