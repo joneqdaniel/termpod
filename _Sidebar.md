@@ -34,7 +34,7 @@
         * [[Silent Hill: Book of Memories]]
         * [[The Walking Dead: Survival Instinct]]
       * [[POD6|Pod 6 Format Reference]]
-        * [[Ghostbusters: The Video Game Remastered]]
+        * [Ghostbusters: The Video Game Remastered](https://en.wikipedia.org/wiki/Ghostbusters:_The_Video_Game#Remastered_version)
 * [[Links]]
   * [Terminal Fury](https://archive.org/details/terminal-fury)
   * [jtrfp](https://github.com/jtrfp/jtrfp)
