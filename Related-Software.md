@@ -9,7 +9,7 @@
 
 List of other related projects:
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
-* [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp) - Java POD format library
+* [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp) - Java POD format library and wiki
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall) - Terminal Velocity/Fury3/Hellbender engine Java port based on [[jtrfp/jtrfp]](https://github.com/jtrfp/jtrfp)
 * [dummiesman/Poddy](https://github.com/dummiesman/Poddy) - POD GUI tool in C# supports [[EPD|Epd-Format-Reference]] `"tsal"` and dependencies for >=[[POD3|Pod-3-Format-Reference]] but misses [[POD6|Pod-6-Format-Reference]]
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
