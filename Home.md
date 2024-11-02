@@ -5,5 +5,6 @@
 * [[Audit Trail]]
 * [[String Helpers]]
 * [[Version History]]
+* [[Related Software]]
 
 [termpod](https://github.com/jopadan/termpod/) a [[Terminal Reality]] engine game archive [[POD|POD File Format Derivates]] file format library written in C++
