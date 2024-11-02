@@ -7,11 +7,10 @@
 * Version History
 * [[Related Software]]
 
-Version Audit Log:
 #### EPD style
 | format | changes |
 |--------|---------|
-| EPD    | checksummed and timestamped entries |
+| EPD    | checksummed and timestamped entries "dtxe" or "tsal"|
 | POD2   | path name string table and audit logs |
 | POD6   | compression instead of checksum |
 #### POD3 style
