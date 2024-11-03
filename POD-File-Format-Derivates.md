@@ -7,7 +7,7 @@
 * [[Version History]]
 
 ```cpp
-enum version
+enum class version
 {
      none = 0,
      pod1 = 1,
