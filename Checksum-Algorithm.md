@@ -16,14 +16,13 @@ xor_in  : 0xFFFFFFFF
 xor_out : 0
 ```
 Checksum ranges
-```cpp
+```c
 /* checksum: crc32::mpeg2 */
 POD2 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(file  )-offset
 POD3 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
 POD4 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
 POD5 : offset=sizeof(ident)+sizeof(checksum) count=sizeof(header)-offset
 EPD  : offset=sizeof(header)                 count=sizeof(file  )-offset
-
 /* checksum: none         */
 POD6 : offset=sizeof(header)                 count=sizeof(file  )-offset
 POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
