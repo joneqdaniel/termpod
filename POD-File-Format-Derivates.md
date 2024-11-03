@@ -42,5 +42,3 @@ constexpr inline enum version id(const c8<4> magic)
      return POD1;
 }
 ```
-Other Tools
-* [[Poddy]]
