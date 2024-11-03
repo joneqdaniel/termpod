@@ -28,5 +28,4 @@ struct entry
 	u32 new_size;
 };
 };
-};
 ```
