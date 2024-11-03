@@ -11,7 +11,7 @@
 
 | format | changes |
 |--------|-----------|
-| POD1   |           |
+| POD1   | entry count and comment in header, name, size and offset for each entry |
 | EPD    | magic ident, checksum and timestamp |
 | POD2   | path name string table and audit logs |
 | POD6   | compression instead of checksum, no more audit logs |
