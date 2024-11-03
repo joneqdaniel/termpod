@@ -8,9 +8,10 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod3
+namespace tr
 {
-
+template<>
+struct archive<pod3>
 struct dependency : std::array<uint8_t, 264>
 {
 };
@@ -39,6 +40,16 @@ struct extra_header : struct header
 /* 0x0120 */ u32<1> pad120;
 };
 
+struct entry
+{
+        u32<1> path_offset; /* names_offset based */
+        u32<1> size;
+        u32<1> offset;
+        t32<1> timestamp;
+        u32<1> checksum;
+};
+};
+
 u32<1> names_offset = entry_offset + entry_count * sizeof(struct entry);
 u32<1> audit_offset = names_size + names_offset + sizeof(struct dependency) * depends_count;
 
@@ -56,13 +67,5 @@ constexpr inline unknown(u8<1>* buf, i32<1> off)
      extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
 }
 
-struct entry
-{
-        u32<1> path_offset; /* names_offset based */
-        u32<1> size;
-        u32<1> offset;
-        t32<1> timestamp;
-        u32<1> checksum;
-};
 };
 ```
