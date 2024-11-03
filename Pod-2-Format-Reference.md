@@ -35,7 +35,7 @@ struct file
     struct entry     entries[header.entry_count];
     str              path_data;
     buf              entry_data;
-    pod::type::audit audits[header.audit_count];
+    tr::archive<pod2>::audit audits[header.audit_count];
 };
 };
 };
