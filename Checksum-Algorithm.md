@@ -62,7 +62,7 @@ constexpr inline size_t section_size(size_t size)
            case section::file:
                return size;
            case section::header:
-               return sizeof(tr::pod<version>::header);
+               return sizeof(tr::archive<version>::header);
            case section::none:
            default:
                return 0;
