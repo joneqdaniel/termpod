@@ -9,11 +9,14 @@ EPD [[POD1|Pod 1 Format Reference]] [[POD2|Pod 2 Format Reference]] [[POD3|Pod 3
 
 #### Enhanced POD format
 ```cpp
-namespace tr::epd
+namespace tr
+{
+template<>
+struct archive<epd1>
 {
      struct header
      {
-          c8<4>   ident; /* "dtxe" or "tsal" */
+          c8<4>   ident; /* "dtxe" */
           c8<256> comment;
           u32<1>  entry_count;
           u32<1>  version;
@@ -27,5 +30,26 @@ namespace tr::epd
           u32<1>  timestamp;
           u32<1>  checksum;
      };
+};
+template<>
+struct archive<epd2>
+{
+     struct header
+     {
+          c8<4>   ident; /* "tsal" */
+          c8<256> comment;
+          u32<1>  entry_count;
+          u32<1>  version;
+          u32<1>  checksum;
+     };
+     struct entry
+     {
+          c8<64>  name;
+          u32<1>  size;
+          u32<1>  offset;
+          u32<1>  timestamp;
+          u32<1>  checksum;
+     };
+};
 };
 ```
