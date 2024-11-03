@@ -10,12 +10,6 @@
 ```cpp
 namespace tr
 {
-template<>
-struct archive<pod3>
-struct dependency : std::array<uint8_t, 264>
-{
-};
-
 struct header
 {
 /* 0x0000 */ c8<4> ident;
@@ -47,6 +41,11 @@ struct entry
         u32<1> offset;
         t32<1> timestamp;
         u32<1> checksum;
+};
+template<>
+struct archive<pod3>
+struct dependency : std::array<uint8_t, 264>
+{
 };
 };
 
