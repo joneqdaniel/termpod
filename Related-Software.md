@@ -8,7 +8,7 @@
 * Related Software
 
 #### Engine ports
-* [StrikerMan780/TerminalFury](https://www.youtube.com/watch?v=nfrk1AaQgk8) - The most promising engine port based on the original source aquisition with NDA
+* [StrikerMan780/TerminalFury](https://www.youtube.com/watch?v=nfrk1AaQgk8) - The most promising engine port from [StrikerMan780](https://github.com/StrikerMan780) based on the original source aquisition with NDA
 * [KMaster/TerminalFury](https://archive.org/details/terminal-fury)
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall) - Java port of Terminal Velocity/Fury3/Hellbender engine games.
 
@@ -17,7 +17,6 @@
 * [Malte0621/TermPod](https://github.com/Malte0621/TermPod) - extractor with old C version of this library
 * [jtrfp/jtrfp](https://github.com/jtrfp/jtrfp) - Java POD format library and wiki
 * [ghoost82/podextract](https://github.com/ghoost82/podextract) 
-* [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [[CPod]] - closed source proprietary library namespace used in Terminal Reality games
 
 #### Nocturne
@@ -35,6 +34,7 @@
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 
 #### Archivers including POD support
+* [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [Malvineous/camoto-studio](https://github.com/Malvineous/camoto-studio)
 * [Malvineous/libgamearchive](https://github.com/Malvineous/libgamearchive)
 * [aluigi/QuickBMS](https://aluigi.altervista.org/quickbms.htm)
