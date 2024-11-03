@@ -9,16 +9,16 @@
 ```cpp
 enum version
 {
-     NONE = 0,
-     POD1 = 1,
-     POD2 = 2,
-     POD3 = 3,
-     POD4 = 4,
-     POD5 = 5,
-     POD6 = 6,
-     EPD  = 7,
-     EPD  = 8,
-     LAST = 9,
+     none = 0,
+     pod1 = 1,
+     pod2 = 2,
+     pod3 = 3,
+     pod4 = 4,
+     pod5 = 5,
+     pod6 = 6,
+     epd_dxte = 7,
+     epd_tsal = 8,
+     last = 9,
 };
 
 const std::pair<const char*, const char*> ident[last] =
