@@ -29,9 +29,9 @@ struct header
 /* 0x0108 */ u32<1> entry_offset;
 /* 0x010c */ u32<1> entry_crc;
 /* 0x0110 */ u32<1> names_size;
-/* 0x0114 */ i32<1> depends_count;
-/* 0x0118 */ i32<1> depends_crc;
-/* 0x011c */ i32<1> audit_crc;
+/* 0x0114 */ u32<1> depends_count;
+/* 0x0118 */ u32<1> depends_crc;
+/* 0x011c */ u32<1> audit_crc;
 };
 
 struct extra_header : struct header
