@@ -8,7 +8,10 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod1
+namespace tr
+{
+template<>
+struct archive<pod1>
 {
 struct header
 {
@@ -20,6 +23,7 @@ struct entry
      c8<32> name;
      u32<1> size;
      u32<1> offset;
+};
 };
 };
 ```
