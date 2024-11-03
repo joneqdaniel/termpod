@@ -12,8 +12,14 @@ namespace tr::pod5
 {
 struct header : struct tr::pod3::header
 {
-        u32<1> next_archive;
+/* 0x0120 */ u32<1> next_archive;
 };
+
+struct extra_header : struct header
+{
+/* 0x0124 */ u32<1> pad124;
+}
+
 using entry = tr::pod4::entry;
 };
 ```
