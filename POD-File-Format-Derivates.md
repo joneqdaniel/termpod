@@ -16,8 +16,8 @@ enum version
      pod4 = 4,
      pod5 = 5,
      pod6 = 6,
-     epd_dxte = 7,
-     epd_tsal = 8,
+     epd1 = 7,
+     epd2 = 8,
      last = 9,
 };
 
