@@ -8,7 +8,10 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod6
+namespace tr
+{
+template<>
+struct archive<pod6>
 {
 struct header
 {
@@ -33,6 +36,7 @@ struct file
      void*         contents;
      struct entry  entries[header.entry_count];
      c8<1>         names[header.names_count]; /* end of entries + entries[i].names_offset */
+};
 };
 };
 ```
