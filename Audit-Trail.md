@@ -10,8 +10,6 @@
 ```cpp
 namespace tr
 {
-struct archive_audit
-{
 enum action : u32
 {
 	add = 0,
@@ -21,7 +19,7 @@ enum action : u32
 struct entry
 {
 	c8  user[32];
-	u32 timestamp;
+	i32 timestamp;
 	enum action action;
 	c8  path[256];
 	i32 old_timestamp;
