@@ -8,7 +8,9 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::audit
+namespace tr
+{
+struct archive_audit
 {
 enum action : u32
 {
@@ -26,6 +28,7 @@ struct entry
 	u32 old_size;
 	i32 new_timestamp;
 	u32 new_size;
+};
 };
 };
 ```
