@@ -29,7 +29,7 @@ POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset
 ```
 ```cpp
 
-enum section
+enum class section
 {
      none   = 0,
      file   = 1,
