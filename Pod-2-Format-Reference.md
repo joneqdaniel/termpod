@@ -8,7 +8,10 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod2
+namespace tr
+{
+template<>
+struct archive<pod2>
 {
 struct header
 {
@@ -33,6 +36,7 @@ struct file
     str              path_data;
     buf              entry_data;
     pod::type::audit audits[header.audit_count];
+};
 };
 };
 ```
