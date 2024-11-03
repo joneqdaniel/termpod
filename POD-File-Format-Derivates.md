@@ -30,8 +30,8 @@ const std::pair<const char*, const char*> ident[last] =
      {"POD4", "POD4\0"},
      {"POD5", "POD5\0"},
      {"POD6", "POD6\0"},
-     {"EPD/dxte" , "dtxe\0"},
-     {"EPD/tsal" , "tsal\0"}
+     {"EPD1", "dtxe\0"},
+     {"EPD2", "tsal\0"}
 };
 
 constexpr inline enum version id(const c8<4> magic)
