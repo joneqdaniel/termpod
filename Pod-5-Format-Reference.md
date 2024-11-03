@@ -8,9 +8,12 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod5
+namespace tr
 {
-struct header : struct tr::pod3::header
+template<>
+struct archive<pod5>
+{
+struct header : struct tr::archive<pod3>::header
 {
 /* 0x0120 */ u32<1> next_archive;
 };
@@ -20,6 +23,7 @@ struct extra_header : struct header
 /* 0x0124 */ u32<1> pad124;
 }
 
-using entry = tr::pod4::entry;
+using entry = tr::archive<pod4>::entry;
+};
 };
 ```
