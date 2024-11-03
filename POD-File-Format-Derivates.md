@@ -16,6 +16,7 @@ enum version
      pod4 = 4,
      pod5 = 5,
      pod6 = 6,
+     epd  = 7,
      epd1 = 7,
      epd2 = 8,
      last = 9,
