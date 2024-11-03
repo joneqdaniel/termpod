@@ -8,9 +8,12 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod4
+namespace tr
 {
-using header = struct tr::pod3::header;
+template<>
+struct archive<pod4>
+{
+using header = struct tr::archive<pod3>::header;
 
 struct entry
 {
@@ -21,6 +24,7 @@ struct entry
         u32<1> compression_level;
         t32<1> timestamp;
         u32<1> checksum;
+};
 };
 };
 ```
