@@ -8,7 +8,7 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod::audit
+namespace tr::audit
 {
 enum action : u32
 {
