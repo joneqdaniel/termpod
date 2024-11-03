@@ -42,14 +42,15 @@ enum section
 
 const std::pair<u32<1>, enum section> range[last] =
 {
-     { 0u                                                                      , section::none   },
-     { sizeof(tr::pod<1>::header)                                              , section::file   },
-     { sizeof(tr::pod<2>::header::ident) + sizeof(tr::pod<2>::header::checksum), section::file   },
-     { sizeof(tr::pod<3>::header::ident) + sizeof(tr::pod<3>::header::checksum), section::header },
-     { sizeof(tr::pod<4>::header::ident) + sizeof(tr::pod<4>::header::checksum), section::header },
-     { sizeof(tr::pod<5>::header::ident) + sizeof(tr::pod<5>::header::checksum), section::header },
-     { sizeof(tr::pod<6>::header)                                              , section::file   },
-     { sizeof(tr::epd::header)                                                 , section::file   },
+     { 0u                                                                             , section::none   },
+     { sizeof(tr::archive<pod1>::header)                                              , section::file   },
+     { sizeof(tr::archive<pod2>::header::ident) + sizeof(tr::pod<2>::header::checksum), section::file   },
+     { sizeof(tr::archive<pod3>::header::ident) + sizeof(tr::pod<3>::header::checksum), section::header },
+     { sizeof(tr::archive<pod4>::header::ident) + sizeof(tr::pod<4>::header::checksum), section::header },
+     { sizeof(tr::archive<pod5>::header::ident) + sizeof(tr::pod<5>::header::checksum), section::header },
+     { sizeof(tr::archive<pod6>::header)                                              , section::file   },
+     { sizeof(tr::archive<epd1>::header)                                              , section::file   },
+     { sizeof(tr::archive<epd2>::header)                                              , section::file   },
 };
 
 template<enum version version>
