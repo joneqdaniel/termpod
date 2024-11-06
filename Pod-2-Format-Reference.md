@@ -9,11 +9,6 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr
-{
-template<>
-struct archive<pod2>
-{
 struct header
 {
     c8<4>  ident; /* "POD2" */
@@ -37,7 +32,5 @@ struct file
     str              path_data;
     buf              entry_data;
     tr::archive<pod2>::audit audits[header.audit_count];
-};
-};
 };
 ```
