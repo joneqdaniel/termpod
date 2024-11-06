@@ -7,9 +7,33 @@
 * [[Version History]]
 * [[Related Software]]
 
+**TODO**
+```cpp
+namespace depend
+{
+struct entry
+{
+        u8<264> unknown;
+};
+};
+
+struct extra_header : struct header
+{
+/* 0x0120 */ u32<1> pad120;
+};
+```
+
 ```cpp
 namespace tr
 {
+namespace depend
+{
+struct entry
+{
+        u8<264> unknown;
+};
+};
+
 template<>
 struct archive<pod3>
 {
@@ -37,11 +61,6 @@ constexpr inline     bool depends_verify(uint8_t* buf) { return depends_crc == c
 constexpr inline     bool  audits_verify(uint8_t* buf) { return  audits_crc == crc32::mpeg2::compute(&buf[ audits_offset()],  audits_count * sizeof(struct  audit::entry)); }
 };
 
-struct extra_header : struct header
-{
-/* 0x0120 */ u32<1> pad120;
-};
-
 struct entry
 {
         u32<1> path_offset; /* names_offset based */
@@ -51,23 +70,12 @@ struct entry
         u32<1> checksum;
 };
 
-namespace depend
-{
-struct entry
-{
-        u8<264> unknown;
-};
-};
-
-u32<1> names_offset = entry_offset + entry_count * sizeof(struct entry);
-u32<1> audit_offset = names_size + names_offset + sizeof(struct dependency) * depends_count;
-
-static constexpr u32<1> BLOCK_SIZE = 2048;
-
 constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
 {
     return (x + (pow2 - 1)) & -pow2;
 }
+
+static constexpr u32<1> BLOCK_SIZE = 2048;
 
 constexpr inline unknown(u8<1>* buf, i32<1> off)
 {
