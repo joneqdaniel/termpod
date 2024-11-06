@@ -26,6 +26,15 @@ constexpr inline unknown(u8<1>* buf, i32<1> off)
 ```
 **DONE**
 ```cpp
+struct entry
+{
+        u32<1> path_offset; /* names_offset based */
+        u32<1> size;
+        u32<1> offset;
+        t32<1> timestamp;
+        u32<1> checksum;
+};
+
 struct header
 {
 /* 0x0000 */ c8<4> ident;
@@ -54,15 +63,6 @@ constexpr inline  bool  depends_verify(uint8_t* buf)   { return depends_crc == c
 constexpr inline  bool   audits_verify(uint8_t* buf)   { return  audits_crc == crc32::mpeg2::compute(&buf[  audits_offset()],   audit_count * sizeof(struct  audit::entry)); }
 constexpr inline struct         entry* entries_begin(uint8_t* buf) { return reinterpret_cast<struct         entry*>(&buf[entries_offset()]); }
 constexpr inline struct depend::entry* depends_begin(uint8_t* buf) { return reinterpret_cast<struct depend::entry*>(&buf[depends_offset()]); }
-constexpr inline struct  audit::entry*  audits_begin(uint8_t* buf) { return reinterpret_cast<struct  audit::entry*>(&buf[  audit_offset()]); }
-};
-
-struct entry
-{
-        u32<1> path_offset; /* names_offset based */
-        u32<1> size;
-        u32<1> offset;
-        t32<1> timestamp;
-        u32<1> checksum;
+constexpr inline struct  audit::entry*  audits_begin(uint8_t* buf) { return reinterpret_cast<struct  audit::entry*>(&buf[ audits_offset()]); }
 };
 ```
