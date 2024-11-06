@@ -22,7 +22,6 @@ struct extra_header : struct header
 /* 0x0120 */ u32<1> pad120;
 };
 
-
 constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
 {
     return (x + (pow2 - 1)) & -pow2;
