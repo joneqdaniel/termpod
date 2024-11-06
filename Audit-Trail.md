@@ -9,8 +9,6 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr
-{
 enum action : u32
 {
 	add = 0,
@@ -27,6 +25,5 @@ struct entry
 	u32 old_size;
 	i32 new_timestamp;
 	u32 new_size;
-};
 };
 ```
