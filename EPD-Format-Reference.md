@@ -2,6 +2,7 @@ EPD [[POD1|Pod 1 Format Reference]] [[POD2|Pod 2 Format Reference]] [[POD3|Pod 3
 
 * [[Checksum Algorithm]]
 * [[Compression Algorithm]]
+* [[Dependency Records]]
 * [[Audit Trail]]
 * [[String Helpers]]
 * [[Version History]]
