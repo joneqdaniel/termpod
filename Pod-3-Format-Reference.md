@@ -28,7 +28,6 @@ constexpr inline unknown(u8<1>* buf, i32<1> off)
      extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entry_crc;
      extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
 }
-
 ```
 **DONE**
 ```cpp
