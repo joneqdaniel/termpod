@@ -28,7 +28,7 @@ constexpr inline unknown(u8<1>* buf, i32<1> off)
 ```cpp
 struct entry
 {
-        u32<1> path_offset; /* names_offset based */
+        u32<1> path_offset;
         u32<1> size;
         u32<1> offset;
         t32<1> timestamp;
