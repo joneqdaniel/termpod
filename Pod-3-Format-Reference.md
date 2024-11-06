@@ -37,7 +37,7 @@ struct entry
 
 struct header
 {
-/* 0x0000 */ c8<4> ident;
+/* 0x0000 */  c8<4> ident;
 /* 0x0004 */ u32<1> checksum;
 /* 0x0008 */ c8<80> comment; 
 /* 0x0058 */ u32<1> entry_count;
