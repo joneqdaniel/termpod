@@ -30,6 +30,9 @@ struct header
 /* 0x0114 */ u32<1> depends_count;
 /* 0x0118 */ u32<1> depends_crc;
 /* 0x011c */ u32<1> audit_crc;
+constexpr inline uint32_t names_offset() { return entry_offset + entry_count * sizeof(struct entry); }
+constexpr inline uint32_t depend_offset() { return names_size + names_offset(); }
+constexpr inline uint32_t audit_offset() { return depend_offset() + depend_count * sizeof(struct depend::entry); }
 };
 
 struct extra_header : struct header
@@ -46,8 +49,11 @@ struct entry
         u32<1> checksum;
 };
 
-struct dependency : std::array<uint8_t, 264>
+namespace depend
 {
+struct entry
+{
+        u8<264> unknown;
 };
 };
 
