@@ -47,7 +47,7 @@ constexpr inline u32<1> entries_offset(          ) { return entry_offset; }
 constexpr inline u32<1>   names_offset(          ) { return entry_offset + entry_count * sizeof(struct entry); }
 constexpr inline u32<1> depends_offset(          ) { return names_size + names_offset(); }
 constexpr inline u32<1>  audits_offset(          ) { return depends_offset() + depends_count * sizeof(struct depend::entry); }
-constexpr inline  b8<1> entries_verify(u8<1>* buf) { return   entry_crc == crc32::mpeg2::compute(&buf[entries_offset()],  entry_count * sizeof(struct entry)); }
+constexpr inline  b8<1> entries_verify(u8<1>* buf) { return   entry_crc == crc32::mpeg2::compute(&buf[entries_offset()],   entry_count * sizeof(struct entry)); }
 constexpr inline  b8<1> depends_verify(u8<1>* buf) { return depends_crc == crc32::mpeg2::compute(&buf[depends_offset()], depends_count * sizeof(struct depend::entry)); }
 constexpr inline  b8<1>  audits_verify(u8<1>* buf) { return  audits_crc == crc32::mpeg2::compute(&buf[ audits_offset()],  audits_count * sizeof(struct  audit::entry)); }
 };
