@@ -10,14 +10,6 @@
 
 **TODO**
 ```cpp
-namespace depend
-{
-struct entry
-{
-        u8<264> unknown;
-};
-};
-
 struct extra_header : struct header
 {
 /* 0x0120 */ u32<1> pad120;
