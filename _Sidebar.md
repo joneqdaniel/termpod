@@ -1,6 +1,7 @@
 * [[Home]]
   * [[Checksum Algorithm]]
   * [[Compression Algorithm]]
+  * [[Dependency Records]]
   * [[Audit Trail]]
   * [[String Helpers]]
   * [[Version History]]
