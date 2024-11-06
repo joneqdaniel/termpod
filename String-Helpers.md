@@ -9,8 +9,6 @@
 * [[Related Software]]
 
 ```cpp
-namespace tr::pod::string
-{
 u32 ceil(u32 len)
 {
         static const std::array<u32,12> sizes = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
@@ -49,5 +47,5 @@ c8* ctime(const t32* time)
         dst[strcspn(dst, "\n")] = '\0';
         return dst; 
 }
-};
+
 ```
