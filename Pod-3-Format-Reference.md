@@ -30,11 +30,11 @@ struct header
 /* 0x0114 */ u32<1> depends_count;
 /* 0x0118 */ u32<1> depends_crc;
 /* 0x011c */ u32<1> audits_crc;
-constexpr inline uint32_t names_offset() { return entry_offset + entry_count * sizeof(struct entry); }
+constexpr inline uint32_t   names_offset() { return entry_offset + entry_count * sizeof(struct entry); }
 constexpr inline uint32_t depends_offset() { return names_size + names_offset(); }
-constexpr inline uint32_t audits_offset() { return depends_offset() + depends_count * sizeof(struct depend::entry); }
+constexpr inline uint32_t  audits_offset() { return depends_offset() + depends_count * sizeof(struct depend::entry); }
 constexpr inline bool depends_verify(uint8_t* buf) { return depends_crc == crc32::mpeg2::compute(&buf[depends_offset()], depends_count * sizeof(struct depend::entry)); }
-constexpr inline bool audits_verify(uint8_t* buf) { return audits_crc == crc32::mpeg2::compute(&buf[audits_offset()], audits_count * sizeof(struct audit::entry)); }
+constexpr inline bool  audits_verify(uint8_t* buf) { return  audits_crc == crc32::mpeg2::compute(&buf[ audits_offset()],  audits_count * sizeof(struct  audit::entry)); }
 };
 
 struct extra_header : struct header
