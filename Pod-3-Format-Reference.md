@@ -22,6 +22,12 @@ struct extra_header : struct header
 /* 0x0120 */ u32<1> pad120;
 };
 
+
+constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
+{
+    return (x + (pow2 - 1)) & -pow2;
+}
+
 static constexpr u32<1> BLOCK_SIZE = 2048;
 
 constexpr inline unknown(u8<1>* buf, i32<1> off)
@@ -71,11 +77,5 @@ struct entry
         t32<1> timestamp;
         u32<1> checksum;
 };
-
-constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
-{
-    return (x + (pow2 - 1)) & -pow2;
-}
-
 };
 ```
