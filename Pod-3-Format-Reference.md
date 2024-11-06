@@ -21,6 +21,7 @@ struct extra_header : struct header
 {
 /* 0x0120 */ u32<1> pad120;
 };
+
 static constexpr u32<1> BLOCK_SIZE = 2048;
 
 constexpr inline unknown(u8<1>* buf, i32<1> off)
