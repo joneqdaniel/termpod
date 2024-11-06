@@ -9,6 +9,11 @@
 * [[Related Software]]
 
 ```cpp
+constexpr inline u32<1> ceil2mpow2(u32<1> x, u32<1> pow2)
+{
+    return (x + (pow2 - 1)) & -pow2;
+}
+
 u32 ceil(u32 len)
 {
         static const std::array<u32,12> sizes = { 4, 8, 12, 16, 32, 48, 64, 80, 96, 128, 256, 264 };
