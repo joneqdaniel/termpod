@@ -33,6 +33,8 @@ struct header
 constexpr inline uint32_t names_offset() { return entry_offset + entry_count * sizeof(struct entry); }
 constexpr inline uint32_t depend_offset() { return names_size + names_offset(); }
 constexpr inline uint32_t audit_offset() { return depend_offset() + depend_count * sizeof(struct depend::entry); }
+constexpr inline bool verify_depends(uint8_t* buf) { return depends_crc == crc32::mpeg2::compute(&buf[depend_offset()], depends_count); }
+constexpr inline bool verify_audits(uint8_t* buf) { return audit_crc == crc32::mpeg2::compute(&buf[audit_offset()], audit_count); }
 };
 
 struct extra_header : struct header
