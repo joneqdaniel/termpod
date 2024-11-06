@@ -10,6 +10,7 @@
 
 ```cpp
 using header = struct pod3::header;
+using extra_header = struct pod3::extra_header;
 
 struct entry
 {
