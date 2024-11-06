@@ -7,3 +7,14 @@
 * [[String Helpers]]
 * [[Version History]]
 * [[Related Software]]
+
+```cpp
+namespace depend
+{
+struct entry
+{
+        u8<264> unknown;
+};
+};
+
+```
