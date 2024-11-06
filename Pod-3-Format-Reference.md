@@ -52,9 +52,9 @@ constexpr inline  bool checksum_verify(uint8_t* buf)   { return    checksum == c
 constexpr inline  bool  entries_verify(uint8_t* buf)   { return   entry_crc == crc32::mpeg2::compute(&buf[ entries_offset()],   entry_count * sizeof(struct entry)); }
 constexpr inline  bool  depends_verify(uint8_t* buf)   { return depends_crc == crc32::mpeg2::compute(&buf[ depends_offset()], depends_count * sizeof(struct depend::entry)); }
 constexpr inline  bool   audits_verify(uint8_t* buf)   { return  audits_crc == crc32::mpeg2::compute(&buf[  audits_offset()],   audit_count * sizeof(struct  audit::entry)); }
-constexpr inline struct entry* entry   entries_begin() { return reinterpret_cast<struct entry*>(&data[entries_offset()]); }
+constexpr inline struct entry* entry   entries_begin() { return reinterpret_cast<struct         entry*>(&data[entries_offset()]); }
 constexpr inline struct depend::entry* depends_begin() { return reinterpret_cast<struct depend::entry*>(&data[depends_offset()]); }
-constexpr inline struct audit::entry*   audits_begin() { return reinterpret_cast<struct audit::entry*>(&data[audit_offset()]); }
+constexpr inline struct audit::entry*   audits_begin() { return reinterpret_cast<struct  audit::entry*>(&data[  audit_offset()]); }
 };
 
 struct entry
