@@ -79,4 +79,10 @@ c8* ctime(const t32* time)
         return dst; 
 }
 
+int32_t ftime(const char* filename)
+{
+	struct stat sb;
+	return stat(filename, &sb) != -1 ? (int32_t)sb.st_mtime : -1;
+}
+
 ```
