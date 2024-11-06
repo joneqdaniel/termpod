@@ -22,6 +22,32 @@ u32 ceil(u32 len)
         return *dst;
 }
 
+char* gets(char* buf)
+{
+	uint32_t size = strnlen(buf, 264);
+	if(size == 0)
+		return nullptr;
+
+	char* dst = (char*)calloc(ceil(size), 1);
+
+	for(uint32_t i = 0; i < size; i++)
+	{
+		dst[i] = buf[i];
+		if(dst[i] == EOF)
+			dst[i] = '\0';
+		if(dst[i] == '\0')
+			break;
+		if(dst[i] == '\\')
+			dst[i] = '/';
+	}
+	if(strlen(dst) == 0)
+	{
+		free(dst);
+		dst = nullptr;
+	}
+	return dst;
+}
+
 c8* fgets(u32 size, FILE* stream)
 {
    if(size == 0)
