@@ -26,14 +26,6 @@ struct extra_header : struct header
 ```cpp
 namespace tr
 {
-namespace depend
-{
-struct entry
-{
-        u8<264> unknown;
-};
-};
-
 template<>
 struct archive<pod3>
 {
