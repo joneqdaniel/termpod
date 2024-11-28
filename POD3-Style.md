@@ -10,7 +10,7 @@
   * POD3 Style
     * [[POD3: EPD/POD2 changes + dependencies|Pod 3 Format Reference]]
     * [[POD4: compression|Pod 4 Format Reference]]
-    * [[POD5: linked archive list|Pod 5 Format Referece]]
+    * [[POD5: linked archive list|Pod 5 Format Reference]]
 * [[Related Software]]
 
 
