@@ -8,10 +8,9 @@
 * [[Version History]]
   * [[POD1 Style]]
   * POD3 Style
+    * [[POD3: EPD/POD2 changes + dependencies|Pod 3 Format Reference]]
+    * [[POD4: compression|Pod 4 Format Reference]]
+    * [[POD5: linked archive list]]
 * [[Related Software]]
 
-| format   | changes |
-|--------|-----------|
-| [[POD3]]   | EPD/POD2 changes + dependencies |
-| POD4   | compression |
-| POD5   | linked archive list |
+
