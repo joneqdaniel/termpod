@@ -8,7 +8,7 @@
 * [[Version History]]
   * POD1 Style
     * [[POD1: entry count and comment in header, name, size and offset for each entry|Pod 1 Format Reference]]
-    * [[EPD   : magic ident, checksum and timestamp|Epd Format Reference]] 
+    * [[EPD  : magic ident, checksum and timestamp|Epd Format Reference]] 
     * [[POD2: path name string table and audit logs|Pod 2 Format Reference]]
     * [[POD6: compression instead of checksum, no more audit logs|Pod 6 Format Reference]]
   * [[POD3 Style]]
