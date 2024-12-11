@@ -8,22 +8,6 @@
 * [[Version History]]
 * [[Related Software]]
 
-**TODO**
-```cpp
-struct extra_header : struct header
-{
-/* 0x0120 */ u32<1> pad120;
-};
-
-static constexpr u32<1> BLOCK_SIZE = 2048;
-
-constexpr inline unknown(u8<1>* buf, i32<1> off)
-{
-     struct extra_header* extra_header = reinterpret_cast<struct extra_header*>(buf);
-     extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entry_crc;
-     extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
-}
-```
 **DONE**
 ```cpp
 struct entry
@@ -65,4 +49,20 @@ constexpr inline struct         entry* entries_begin(uint8_t* buf) { return rein
 constexpr inline struct depend::entry* depends_begin(uint8_t* buf) { return reinterpret_cast<struct depend::entry*>(&buf[depends_offset()]); }
 constexpr inline struct  audit::entry*  audits_begin(uint8_t* buf) { return reinterpret_cast<struct  audit::entry*>(&buf[ audits_offset()]); }
 };
+```
+**TODO**
+```cpp
+struct extra_header : struct header
+{
+/* 0x0120 */ u32<1> pad120;
+};
+
+static constexpr u32<1> BLOCK_SIZE = 2048;
+
+constexpr inline unknown(u8<1>* buf, i32<1> off)
+{
+     struct extra_header* extra_header = reinterpret_cast<struct extra_header*>(buf);
+     extra_header->audit_crc = ceil2mpow2(off + extra_header->entries_crc, BLOCK_SIZE) - extra_header->entry_crc;
+     extra_header->pad120 = extra_header->entry_offset - extra_header->audit_crc > BLOCK_SIZE ? BLOCK_SIZE : extra_header->entry_offset - extra_header->audit_crc;
+}
 ```
