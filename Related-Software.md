@@ -35,7 +35,6 @@
 * [KeyofBlueS/GBTVGRAC](https://github.com/KeyofBlueS/GBTVGRAC)
 
 #### Archivers including POD support
-* [jengelh/hxtools - smm/extract_f3pod](https://codeberg.org/jengelh/hxtools)
 * [Malvineous/camoto-studio](https://github.com/Malvineous/camoto-studio)
 * [Malvineous/libgamearchive](https://github.com/Malvineous/libgamearchive)
 * [aluigi/QuickBMS](https://aluigi.altervista.org/quickbms.htm)
