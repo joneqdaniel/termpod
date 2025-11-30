@@ -9,7 +9,7 @@
 * Related Software
 
 #### Engine ports
-* [StrikerMan780/TerminalFury](https://ko-fi.com/post/TerminalFury-Mini-Progress-Update-O4O418VSTE) - The most promising engine port from [StrikerTheHedgeFox](https://ko-fi.com/StrikerTheHedgefox) based on the original source aquisition with NDA
+* [StrikerMan780/TerminalFury](https://www.youtube.com/watch?v=1FbOGmDFV0s) - The most promising engine port from [StrikerTheHedgeFox](https://www.youtube.com/@StrikerTheHedgefox/videos) based on the original source aquisition with NDA
 * [KMaster/TerminalFury](https://archive.org/details/terminal-fury)
 * [jtrfp/terminal-recall](https://github.com/jtrfp/terminal-recall) - Java port of Terminal Velocity/Fury3/Hellbender engine games.
 
