@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
 project(termpod LANGUAGES CXX C)
 
 set(PROJECT_VERSION 1.0)
@@ -6,30 +6,51 @@ set(PROJECT_DESCRIPTION "Single-header C++ library for CRC-32/MPEG-2 checksummed
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-set( CMAKE_CXX_STANDARD 26 )
-set( CMAKE_CXX_STANDARD_REQUIRED ON )
-add_compile_options(-g -march=native -O3 -mfpmath=sse)
-add_compile_options(-DHAVE_GLCOREARB_H=1)
-add_compile_options(-D_FILE_OFFSET_BITS=64)
-#add_compile_options(-fdata-sections)
-add_compile_options(-fpermissive)
-add_compile_options(-ffunction-sections)
-add_compile_options(-Wall)
-#add_compile_options(-Wextra)
-add_compile_options(-Wno-pedantic)
-add_compile_options(-Wno-narrowing)
-#add_link_options(-Wl,--gc-sections)
-#add_link_options(-Wl,--print-gc-sections)
-#add_link_options(-Wl,-s)
-
 include(GNUInstallDirs)
 include(FindPkgConfig)
+
+if( NOT CMAKE_BUILD_TYPE )
+        set( CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE )
+endif()
+
+set( CMAKE_C_STANDARD 23 )
+set( CMAKE_C_STANDARD_REQUIRED ON )
+set( CMAKE_CXX_STANDARD 26)
+set( CMAKE_CXX_STANDARD_REQUIRED ON )
+
+if( CMAKE_BUILD_TYPE EQUAL Debug )
+	add_compile_options(-g)
+endif()
+if( CMAKE_GENERATOR_PLATFORM STREQUAL "x64" OR CMAKE_GENERATOR_PLATFORM STREQUAL "x86_64" OR CMAKE_GENERATOR_PLATFORM STREQUAL "AMD64" )
+	add_compile_options(-mfpmath=sse)
+endif()
+
+if( NOT CMAKE_BUILD_OPTLEVEL )
+	set( CMAKE_BUILD_OPTLEVEL 3 CACHE STRING "Choose the optimization level of the build." FORCE )
+endif()
+
+add_compile_options(-march=native)
+add_compile_options(-O${OPTIMIZATION})
+add_compile_options(-fopenmp-simd)
+add_compile_options(-ftree-vectorize)
+add_compile_options(-Wno-gnu-alignof-expression)
+add_compile_options(-D_FILE_OFFSET_BITS=64)
+add_compile_options(-fdata-sections)
+add_compile_options(-fpermissive)
+add_compile_options(-ffunction-sections)
+add_compile_options(-Wno-array-bounds)
+add_compile_options(-Wno-unused-parameter)
+add_compile_options(-Wno-pedantic)
+add_compile_options(-Wno-narrowing)
+add_link_options(-Wl,--gc-sections)
+add_link_options(-Wl,--print-gc-sections)
+add_link_options(-Wl,-s)
 
 set(SOURCE_FILES
 )
 
 set(INCLUDE_FILES
-	external/libzippp/src/libzippp.h
+	#external/libzippp/src/libzippp.h
 	external/crcle/include/crcle/crcle.hpp
 	include/termpod/pod.hpp
 )
@@ -38,14 +59,14 @@ set(EXAMPLE_SOURCE_FILES
 	examples/podorgana/podorgana.cpp
 )
 
-add_subdirectory(external/libzippp)
+#add_subdirectory(external/libzippp)
 
 # termpod library
 include_directories(${PROJECT_NAME} PUBLIC 
                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
                     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/external/crcle/include>
-                    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/external/libzippp/src>
+		    #                    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/external/libzippp/src>
                     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>)
 
 set(install_prefix "${CMAKE_INSTALL_PREFIX}")

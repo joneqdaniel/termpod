@@ -267,6 +267,7 @@ namespace tr::pod
 			int32_t          timestamp;
 			uint32_t          checksum;
 		};
+#pragma pack(push,1)
 		struct header
 		{
 			/* 0x0000 */ char          ident[4];
@@ -297,6 +298,8 @@ namespace tr::pod
 			constexpr inline struct depend::entry* depends_begin(uint8_t* buf) { return reinterpret_cast<struct depend::entry*>(&buf[depends_offset()]); }
 			constexpr inline struct  audit::entry*  audits_begin(uint8_t* buf) { return reinterpret_cast<struct  audit::entry*>(&buf[ audits_offset()]); }
 		};
+#pragma pack(pop)
+
 		struct extra_header : header
 		{
 			uint32_t            pad120;
