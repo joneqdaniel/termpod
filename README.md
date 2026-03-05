@@ -6,7 +6,7 @@ Single-header C++ library for CRC-32/MPEG-2 checksummed POD{1,2,3,4,5,6}/EPD Ext
 Included as submodule:
 
 - [libzippp](http://github.com/ctabin/libzippp)
-- [crcle](http://github.com/jopadan/crcle)
+- [crcle](http://github.com/joneqdaniel/crcle)
 
 ## Status
 
@@ -21,7 +21,8 @@ Included as submodule:
 - identify extra_header uint32_t field and its use
 - identify dependency data structure of length 264
 - implement compression used in POD4/5
-- update [termpod Wiki](https://github.com/jopadan/termpod/wiki)
+- add pod.ini support
+- update [termpod Wiki](https://github.com/joneqdaniel/termpod/wiki)
 
 ## Build & Run
 
