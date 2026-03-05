@@ -1,5 +1,5 @@
 # termpod
-Single-header C++ library for CRC-32/MPEG-2 checksummed POD{1,2,3,4,5,6}/EPD archive file formats used in Terminal Reality game engines
+Single-header C++ library for CRC-32/MPEG-2 checksummed POD{1,2,3,4,5,6}/EPD Exteneded Payable on Death archive file formats used in Terminal Reality game engines
 
 ## Dependencies
 
