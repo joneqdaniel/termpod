@@ -13,6 +13,30 @@
 #include <utime.h>
 #include <crcle/crcle.hpp>
 
+namespace tr
+{
+	using u8  =       uint8_t;
+	using i8  =        int8_t;
+	using s8  =        int8_t;
+	using c8  =          char;
+	using b8  =          bool;
+	using uc8 = unsigned char;
+
+	using u16  =     uint16_t;
+	using i16  =      int16_t;
+	using s16  =      int16_t;
+	using u32  =     uint32_t;
+	using i32  =      int32_t;
+	using t32  =          i32;
+	using s32  =      int32_t;
+	using u64  =     uint64_t;
+	using i64  =      int64_t;
+	using s64  =      int64_t;
+
+	using f32  =        float;
+	using f64  =       double;
+};
+
 namespace tr::pod
 {
 	/* pod version */
@@ -26,9 +50,7 @@ namespace tr::pod
 		pod5 = 5,
 		pod6 = 6,
 		epd  = 7,
-		epd1 = 7,
-		epd2 = 9,
-		last = 10,
+		last = 8,
 	};
 
 	static constexpr const std::pair<const char*, const char*> ident[last] =
@@ -41,8 +63,7 @@ namespace tr::pod
 		{"POD5", "POD5\0"},
 		{"POD6", "POD6\0"},
 		{"EPD",  "dtxe\0"},
-		{"EPD1", "dtxe\0"},
-		{"EPD2", "tsal\0"},
+		{"LAST", "tsal\0"},
 	};
 
 	static constexpr inline enum version id(const char magic[4])
@@ -112,17 +133,17 @@ namespace tr::pod
 			return dst;
 		}
 
-		char* ctime(const int32_t* time)
+		c8* ctime(const t32* time)
 		{
 			time_t t = (time_t)*time;
-			char* dst = std::ctime(&t);
+			c8* dst = std::ctime(&t);
 			dst[strcspn(dst, "\n")] = '\0';
 			return dst;
 		}
-		int32_t ftime(const char* filename)
+		t32 ftime(const c8* filename)
 		{
 			struct stat sb;
-			return stat(filename, &sb) != -1 ? (int32_t)sb.st_mtime : -1;
+			return stat(filename, &sb) != -1 ? (t32)sb.st_mtime : -1;
 		}
 	};
 	/* audit types */
@@ -137,14 +158,14 @@ namespace tr::pod
 		};
 		struct entry
 		{
-			char              user[32];
-			int32_t          timestamp;
+			c8                user[32];
+			t32              timestamp;
 			enum action         action;
-			char             name[256];
-			int32_t      old_timestamp;
-			uint32_t          old_size;
-			int32_t      new_timestamp;
-			uint32_t          new_size;
+			c8               name[256];
+			t32          old_timestamp;
+			u32               old_size;
+			t32          new_timestamp;
+			u32               new_size;
 		};
 
 		std::pair<enum action, const char*> str[3] = { { action::add, "          Add" }, { action::rem, "       Remove" }, { action::chg, "       Change" } };
@@ -169,14 +190,14 @@ namespace tr::pod
 	{
 		struct header
 		{
-			uint32_t       entry_count;
-			char           comment[80];
+			u32            entry_count;
+			c8             comment[80];
 		};
 		struct entry
 		{
-			char              name[32];
-			uint32_t              size;
-			uint32_t            offset;
+			c8                name[32];
+			u32                   size;
+			u32                 offset;
 		};
 	};
 	template<>
@@ -184,20 +205,20 @@ namespace tr::pod
 	{
 		struct header
 		{
-			char              ident[4];
-			char          comment[256];
-			uint32_t       entry_count;
-			uint32_t           version;
-			uint32_t          checksum;
+			c8                ident[4];
+			c8            comment[256];
+			u32            entry_count;
+			u32                version;
+			u32               checksum;
 		};
 
 		struct entry
 		{
-			char              name[64];
-			uint32_t              size;
-			uint32_t            offset;
-			uint32_t         timestamp;
-			uint32_t          checksum;
+			c8                name[64];
+			u32                   size;
+			u32                 offset;
+			u32              timestamp;
+			u32               checksum;
 		};
 	};
 	template<>
@@ -211,20 +232,20 @@ namespace tr::pod
 	{
 		struct header
 		{
-			char              ident[4];
-			uint32_t          checksum;
-			char           comment[80];
-			uint32_t       entry_count;
-			uint32_t       audit_count;
+			c8                ident[4];
+			u32               checksum;
+			c8             comment[80];
+			u32            entry_count;
+			u32            audit_count;
 		};
 
 		struct entry
 		{
-			uint32_t      names_offset;
-			uint32_t              size;
-			uint32_t            offset;
-			int32_t          timestamp;
-			uint32_t          checksum;
+			u32           names_offset;
+			u32                   size;
+			u32                 offset;
+			t32              timestamp;
+			u32               checksum;
 		};
 	};
 	template<>
@@ -232,20 +253,20 @@ namespace tr::pod
 	{
 		struct header
 		{
-			char              ident[4];
-			uint32_t       entry_count;
-			uint32_t           version;
-			uint32_t      entry_offset;
-			uint32_t       names_count;
+			c8                ident[4];
+			u32            entry_count;
+			u32                version;
+			u32           entry_offset;
+			u32            names_count;
 		};
 		struct entry
 		{
-			uint32_t      names_offset;
-			uint32_t              size;
-			uint32_t            offset;
-			uint32_t      uncompressed;
-			uint32_t compression_level;
-			uint32_t              zero;
+			u32           names_offset;
+			u32                   size;
+			u32                 offset;
+			u32           uncompressed;
+			u32      compression_level;
+			u32                   zero;
 		};
 	};
         /* POD3 Style types */
@@ -253,47 +274,50 @@ namespace tr::pod
 	{
 		struct entry
 		{
-			uint8_t       unknown[264];
+			u8            unknown[264];
 		};
 	};
 	template<>
 	struct archive<pod3>
 	{
+#pragma pack(push,1)
 		struct entry
 		{
-			uint32_t      names_offset;
-			uint32_t              size;
-			uint32_t            offset;
-			int32_t          timestamp;
-			uint32_t          checksum;
+			u32           names_offset;
+			u32                   size;
+			u32                 offset;
+			t32              timestamp;
+			u32               checksum;
 		};
+#pragma pack(pop)
+
 #pragma pack(push,1)
 		struct header
 		{
-			/* 0x0000 */ char          ident[4];
-			/* 0x0004 */ uint32_t      checksum;
-			/* 0x0008 */ char       comment[80]; 
-			/* 0x0058 */ uint32_t   entry_count;
-			/* 0x005c */ uint32_t   audit_count;
-			/* 0x0060 */ uint32_t      revision;
-			/* 0x0064 */ uint32_t      priority;
-			/* 0x0068 */ char        author[80];
-			/* 0x00B8 */ char     copyright[80];
-			/* 0x0108 */ uint32_t  entry_offset;
-			/* 0x010c */ uint32_t     entry_crc;
-			/* 0x0110 */ uint32_t    names_size;
-			/* 0x0114 */ uint32_t depends_count;
-			/* 0x0118 */ uint32_t   depends_crc;
-			/* 0x011c */ uint32_t    audits_crc;
-			constexpr inline            uint32_t checksum_offset(            ) { return sizeof(checksum) + sizeof(ident); }
-			constexpr inline            uint32_t  entries_offset(            ) { return entry_offset; }
-			constexpr inline            uint32_t    names_offset(            ) { return entry_offset + entry_count * sizeof(struct entry); }
-			constexpr inline            uint32_t  depends_offset(            ) { return names_size + names_offset(); }
-			constexpr inline            uint32_t   audits_offset(            ) { return depends_offset() + depends_count * sizeof(struct depend::entry); }
-			constexpr inline                bool checksum_verify(uint8_t* buf) { return    checksum == crc32::mpeg2::compute(&buf[checksum_offset()], sizeof(struct header) - sizeof(checksum) - sizeof(ident)); } 
-			constexpr inline                bool  entries_verify(uint8_t* buf) { return   entry_crc == crc32::mpeg2::compute(&buf[ entries_offset()],   entry_count * sizeof(struct entry)); }
-			constexpr inline                bool  depends_verify(uint8_t* buf) { return depends_crc == crc32::mpeg2::compute(&buf[ depends_offset()], depends_count * sizeof(struct depend::entry)); }
-			constexpr inline                bool   audits_verify(uint8_t* buf) { return  audits_crc == crc32::mpeg2::compute(&buf[  audits_offset()],   audit_count * sizeof(struct  audit::entry)); }
+			/* 0x0000 */ c8            ident[4];
+			/* 0x0004 */ u32           checksum;
+			/* 0x0008 */ c8         comment[80]; 
+			/* 0x0058 */ u32        entry_count;
+			/* 0x005c */ u32        audit_count;
+			/* 0x0060 */ u32           revision;
+			/* 0x0064 */ u32           priority;
+			/* 0x0068 */ c8          author[80];
+			/* 0x00B8 */ c8       copyright[80];
+			/* 0x0108 */ u32       entry_offset;
+			/* 0x010c */ u32          entry_crc;
+			/* 0x0110 */ u32         names_size;
+			/* 0x0114 */ u32      depends_count;
+			/* 0x0118 */ u32        depends_crc;
+			/* 0x011c */ u32         audits_crc;
+			constexpr inline            u32      checksum_offset(            ) { return sizeof(checksum) + sizeof(ident); }
+			constexpr inline            u32       entries_offset(            ) { return entry_offset; }
+			constexpr inline            u32         names_offset(            ) { return entry_offset + entry_count * sizeof(struct entry); }
+			constexpr inline            u32       depends_offset(            ) { return names_size + names_offset(); }
+			constexpr inline            u32        audits_offset(            ) { return depends_offset() + depends_count * sizeof(struct depend::entry); }
+			constexpr inline            b8       checksum_verify(uint8_t* buf) { return    checksum == crc32::mpeg2::compute(&buf[checksum_offset()], sizeof(struct header) - sizeof(checksum) - sizeof(ident)); } 
+			constexpr inline            b8        entries_verify(uint8_t* buf) { return   entry_crc == crc32::mpeg2::compute(&buf[ entries_offset()],   entry_count * sizeof(struct entry)); }
+			constexpr inline            b8        depends_verify(uint8_t* buf) { return depends_crc == crc32::mpeg2::compute(&buf[ depends_offset()], depends_count * sizeof(struct depend::entry)); }
+			constexpr inline            b8         audits_verify(uint8_t* buf) { return  audits_crc == crc32::mpeg2::compute(&buf[  audits_offset()],   audit_count * sizeof(struct  audit::entry)); }
 			constexpr inline struct         entry* entries_begin(uint8_t* buf) { return reinterpret_cast<struct         entry*>(&buf[entries_offset()]); }
 			constexpr inline struct depend::entry* depends_begin(uint8_t* buf) { return reinterpret_cast<struct depend::entry*>(&buf[depends_offset()]); }
 			constexpr inline struct  audit::entry*  audits_begin(uint8_t* buf) { return reinterpret_cast<struct  audit::entry*>(&buf[ audits_offset()]); }
@@ -302,28 +326,28 @@ namespace tr::pod
 
 		struct extra_header : header
 		{
-			uint32_t            pad120;
+			u32            pad120;
 		};
 		constexpr static bool verify(const uint8_t* buf, size_t len)
 		{
-			uint32_t checksum = (uint32_t)-1;
+			u32 checksum = (u32)-1;
 			if(id((const char*)buf) == pod3)
 				checksum = pod::checksum<pod3>(buf, len);
-			if(checksum != (uint32_t)-1)
+			if(checksum != (ui32)-1)
 				return *(uint32_t*)(buf + 4) == checksum;
 			return false;
 		}
 		constexpr static bool verify(std::filesystem::path src)
 		{
-			FILE* fi     = nullptr;
-			size_t len  = 0;
-			uint8_t* buf = nullptr;
-			bool status = false;
+			FILE* fi      = nullptr;
+			size_t len    = 0;
+			u8* buf  = nullptr;
+			b8 status   = false;
 			if(std::filesystem::exists(src) && ((len = std::filesystem::file_size(src)) > 0))
 			{
 				if(((fi = fopen(src.c_str(), "rb")) != nullptr))
 				{
-					if(((buf = (uint8_t*)std::malloc(len)) != nullptr) && fread(buf, len, 1, fi) == 1)
+					if(((buf = (u8*)std::malloc(len)) != nullptr) && fread(buf, len, 1, fi) == 1)
 					{
 						status = verify(buf, len);
 						free(buf);
@@ -343,13 +367,13 @@ namespace tr::pod
 
 		struct entry
 		{
-			uint32_t      names_offset;
-			uint32_t              size;
-			uint32_t            offset;
-			uint32_t uncompressed_size;
-			uint32_t compression_level;
-			int32_t          timestamp;
-			uint32_t          checksum;
+			u32      names_offset;
+			u32              size;
+			u32            offset;
+			u32 uncompressed_size;
+			u32 compression_level;
+			t32         timestamp;
+			u32          checksum;
 		};
 	};
 	template<>
@@ -357,11 +381,11 @@ namespace tr::pod
 	{
 		struct header : archive<pod3>::header
 		{
-			uint8_t   next_archive[80];
+			u8   next_archive[80];
 		};
 		struct extra_header : header
 		{
-			uint32_t            pad124;
+			u32            pad124;
 		};
 		using entry = archive<pod4>::entry;
 	};
@@ -449,16 +473,16 @@ namespace tr::pod
 	struct entry
 	{
 		char*                 name;
-		int32_t          timestamp;
-		uint32_t          checksum;
-		uint32_t            offset;
-		uint32_t              size;
-		uint32_t uncompressed_size;
-		uint32_t compression_level;
-		uint8_t*     data;
+		t32          timestamp;
+		u32          checksum;
+		u32            offset;
+		u32              size;
+		u32 uncompressed_size;
+		u32 compression_level;
+		u8*     data;
 		entry() : name(nullptr), timestamp(-1), checksum(-1), size(0), data(nullptr) { }
 		~entry() { if(name) free(name); }
-		bool extract(std::filesystem::path dst = ".")
+		b8 extract(std::filesystem::path dst = ".")
 		{
 			const std::filesystem::path od = dst / name;
 			std::filesystem::create_directories(od.parent_path());
@@ -480,10 +504,10 @@ namespace tr::pod
 	{
 		std::filesystem::path name;
 		enum version version = version::none;
-		uint32_t size;
-		uint32_t checksum;
-		int32_t timestamp;
-		std::vector<uint8_t> data;
+		u32 size;
+		u32 checksum;
+		t32 timestamp;
+		std::vector<u8> data;
 		FILE* fp;
 
 		archive<pod3>::header* hdr;
@@ -539,10 +563,10 @@ namespace tr::pod
 		constexpr void print()
 		{
 			printf("[NFO] %s checksum   offset          size name\n\n", pod::string::ctime(&timestamp));
-			for(uint32_t i = 0; i < entries.size(); i++)
+			for(u32 i = 0; i < entries.size(); i++)
 				printf("[ENT] %s %.8X %.8X %13u %s\n", pod::string::ctime(&entries[i].timestamp), entries[i].checksum, entries[i].offset, entries[i].size, entries[i].name);
 			if(pod::audit::visible)
-				for(uint32_t i = 0; i < hdr->audit_count; i++)
+				for(u32 i = 0; i < hdr->audit_count; i++)
 					printf("%s\n", pod::audit::print(reinterpret_cast<struct audit::entry*>(&data[hdr->audits_offset()])[i]));
 			printf("\n[HDR] %s %.8X %.8X %13zu %s %s %s %s\n", pod::string::ctime(&timestamp), hdr->checksum, 0, sizeof(struct pod::archive<pod3>::header), pod::ident[pod::id(hdr->ident)].first, hdr->comment, hdr->author, hdr->copyright);
 			printf("[FLE] %s %.8X %.8X %13u %s\n", pod::string::ctime(&timestamp), checksum, 0, size, name.c_str());
@@ -561,7 +585,7 @@ namespace tr::pod
 				{
 					if(fread(&data[0], size, 1, fp) == 1)
 					{
-						version = id((const char*)&data[0]);
+						version = id((const c8*)&data[0]);
 						checksum = crc32::mpeg2::compute(&data[0], size);
 					}
 					fclose(fp);
@@ -571,11 +595,11 @@ namespace tr::pod
 			fprintf(stderr, "[ERR] file %s does not exist or is empty\n", name.c_str());
 			return version;
 		}
-		bool verify_entries()
+		b8 verify_entries()
 		{
-			for(uint32_t i=0; i < entries.size(); i++)
+			for(u32 i=0; i < entries.size(); i++)
 			{
-				uint32_t chksum = crc32::mpeg2::compute(entries[i].data, entries[i].size);
+				u32 chksum = crc32::mpeg2::compute(entries[i].data, entries[i].size);
 				if(chksum != entries[i].checksum)
 				{
 					fprintf(stderr, "[ERR] CRC-32/MPEG-2 checksum verification failed for %s of size %u in %s\n", entries[i].name, entries[i].size, name.c_str());
@@ -584,7 +608,7 @@ namespace tr::pod
 			}
 			return true;
 		}
-		struct pod::entry& operator[](uint32_t i) { return entries[i]; }
+		struct pod::entry& operator[](u32 i) { return entries[i]; }
 	};
 };
 /*
