@@ -11,6 +11,7 @@
 #include <vector>
 #include <sys/stat.h>
 #include <utime.h>
+#include <getopt.h>
 #include <crcle/crcle.hpp>
 
 namespace tr
@@ -39,6 +40,7 @@ namespace tr
 
 namespace tr::pod
 {
+	bool extract = false;
 	/* pod version */
 	enum version
 	{
@@ -177,6 +179,31 @@ namespace tr::pod
 			return visible ? (const char*)dst : "";
 		}
 	};
+
+	constexpr void parse_args(int argc, char** argv)
+	{
+		int opt;
+
+		while((opt = getopt(argc, argv, "xa")) != -1) {
+			switch(opt) {
+				case 'x':
+					extract = true;
+					break;
+				case 'a':
+					audit::visible = true;
+					break;
+				default:
+					fprintf(stderr, "Usage: %s [-x] [-a] [POD3FILE]\n", argv[0]);
+					exit(EXIT_FAILURE);
+			}
+		}
+		if(optind >= argc)
+		{
+			fprintf(stderr, "Usage: %s [-x] [-a] [POD3FILE]\n", argv[0]);
+			exit(EXIT_FAILURE);
+		}
+		printf("\n");
+	}
 
 	/* pod archive types */
 	template<enum version>
