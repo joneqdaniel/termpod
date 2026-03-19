@@ -51,9 +51,10 @@ namespace tr::pod
 		pod6 = 6,
 		epd  = 7,
 		last = 8,
+		count
 	};
 
-	static constexpr const std::pair<const char*, const char*> ident[last] =
+	static constexpr const std::pair<const char*, const char*> ident[count] =
 	{
 		{"NONE", "\0NONE"},
 		{"POD1", "\0POD1"},
@@ -201,7 +202,7 @@ namespace tr::pod
 		};
 	};
 	template<>
-	struct archive<epd1>
+	struct archive<epd>
 	{
 		struct header
 		{
@@ -222,10 +223,10 @@ namespace tr::pod
 		};
 	};
 	template<>
-	struct archive<epd2>
+	struct archive<last>
 	{
-		using header = archive<epd1>::header;
-		using entry  = archive<epd1>::entry;
+		using header = archive<epd>::header;
+		using entry  = archive<epd>::entry;
 	};
 	template<>
 	struct archive<pod2>
@@ -333,7 +334,7 @@ namespace tr::pod
 			u32 checksum = (u32)-1;
 			if(id((const char*)buf) == pod3)
 				checksum = pod::checksum<pod3>(buf, len);
-			if(checksum != (ui32)-1)
+			if(checksum != (u32)-1)
 				return *(uint32_t*)(buf + 4) == checksum;
 			return false;
 		}
@@ -417,7 +418,7 @@ namespace tr::pod
 	| POD1 : offset=sizeof(header)=4+80            count=sizeof(file  )-offset |
 	============================================================================
 	*/
-	const std::pair<uint32_t, enum section> range[last] =
+	const std::pair<uint32_t, enum section> range[count] =
 	{
 		{ 0u                                                                            , section::none   },
 		{ sizeof(struct archive<pod1>::header)                                          , section::file   },
@@ -427,8 +428,7 @@ namespace tr::pod
 		{ sizeof(archive<pod5>::header::ident) + sizeof(archive<pod5>::header::checksum), section::header },
 		{ sizeof(struct archive<pod6>::header)                                          , section::file   },
 		{ sizeof(struct archive<epd>::header)                                           , section::file   },
-		{ sizeof(struct archive<epd1>::header)                                          , section::file   },
-		{ sizeof(archive<epd2>::header)                                                 , section::file   },
+		{ sizeof(archive<last>::header)                                                 , section::file   },
 	};
 
 	template<enum version version>
@@ -522,9 +522,11 @@ namespace tr::pod
 				case pod1:
 					break;
 				case pod2:
+//					hdr = reinterpret_cast<archive<pod2>::header*>(&data[0]);
+//					entries.resize(hdr->entry_count);
 					break;
-				case epd1:
-				case epd2:
+				case epd:
+				case last:
 					break;
 				case pod6:
 					break;
