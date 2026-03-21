@@ -1,6 +1,6 @@
 [submodule "external/crcle"]
 	path = external/crcle
-	url = https://github.com/jopadan/crcle
+	url = https://github.com/joneqdaniel/crcle
 [submodule "external/libzippp"]
 	path = external/libzippp
 	url = https://github.com/ctabin/libzippp
